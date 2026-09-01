@@ -1,6 +1,6 @@
 # Synthèse par parcelle -- Irrigation détectée & Besoin en eau
 
-*Généré le 2026-08-31 13:19*
+*Généré le 2026-09-01 09:06*
 
 Ce document croise deux analyses indépendantes : **quand une irrigation a probablement eu lieu** (`detect_irrigation_vs_pluie_v3.py`) et **quand la plante en avait besoin** (`detect_besoin_vs_irrigation.py`).
 

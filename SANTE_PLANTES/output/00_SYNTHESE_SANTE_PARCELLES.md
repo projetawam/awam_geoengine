@@ -1,6 +1,6 @@
 # 🌿 Synthèse de Santé des Plantes AWAM — Suivi Multi-Capteurs
 
-*Généré le 2026-08-31 13:18*
+*Généré le 2026-09-01 09:05*
 
 Ce document présente le diagnostic complet de santé des cultures pour les sites de **Makthar** et **Sidi Mechreg**.
 Il combine 7 scores composites (Vigueur, Chlorophylle, Stress Hydrique, Canopée, Phénologie, Anomalies, Risque Maladies) et 2 évaluations complémentaires (Qualité du Sol & Stress Température) pour produire l'**Indice de Santé AWAM (0-100)**.
