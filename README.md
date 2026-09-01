@@ -1,6 +1,6 @@
 # AWAM GeoEngine & Analytical Pipeline
 
-> **Wallah We Can (WWC) GeoAI Agronomic Analytics Platform**  
+> **Wallah We Can (WWC) Geospatial Analytics Platform**  
 > Multi-sensor satellite extraction, VARI calibration, plant health diagnostics, smart irrigation detection, and agronomic risk alert engines.
 
 ---
