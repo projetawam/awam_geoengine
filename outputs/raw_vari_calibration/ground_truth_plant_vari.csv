@@ -1,0 +1,16 @@
+image_name,norm_crop,parcel_id,total_pixels,plant_pixels,soil_pixels,plant_cover_frac,plant_vari_mean,plant_vari_median,plant_vari_p90,plant_vari_std,soil_vari_mean,soil_vari_median,mixed_vari_mean,mixed_vari_median
+advantis_kemel_1.dng,Advantis (Weeds),sidi_mechreg_Parcelle_Kemel_2,12533760,8648877,3884883,0.69,-0.2738,-0.2805,-0.205,0.0532,-0.361,-0.3573,-0.3008,-0.3028
+caroubier_kemel_1.dng,Caroubier,sidi_mechreg_Parcelle_Kemel_3,12533760,782401,11751359,0.0624,0.0193,0.024,0.1066,0.0729,-0.2742,-0.28,-0.2559,-0.2761
+caroubier_kemel_2.dng,Caroubier,sidi_mechreg_Parcelle_Kemel_3,12533760,1707516,10826244,0.1362,-0.041,-0.0364,0.0443,0.0689,-0.2856,-0.2901,-0.2522,-0.2814
+caroubier_kemel_3.dng,Caroubier,sidi_mechreg_Parcelle_Kemel_3,12533760,1804830,10728930,0.144,0.0076,0.0155,0.0875,0.0684,-0.2739,-0.2804,-0.2333,-0.2681
+geranium_kemel_1.dng,Geranium,sidi_mechreg_Parcelle_Kemel_1,12533760,1221649,11312111,0.0975,-0.0512,-0.0506,0.0387,0.0701,-0.2195,-0.2174,-0.2031,-0.2114
+geranium_kemel_2.dng,Geranium,sidi_mechreg_Parcelle_Kemel_1,12533760,689822,11843938,0.055,-0.1193,-0.123,-0.0403,0.0608,-0.242,-0.2384,-0.2352,-0.2349
+geranium_kemel_3.dng,Geranium,sidi_mechreg_Parcelle_Kemel_1,12533760,968361,11565399,0.0773,-0.0393,-0.0398,0.0586,0.0759,-0.2221,-0.2257,-0.2079,-0.2205
+geranium_yahia_1.dng,Geranium,sidi_mechreg_Parcelle_Yahia_4,12533760,955802,11577958,0.0763,-0.0038,-0.0074,0.1094,0.0879,-0.2624,-0.2365,-0.2427,-0.2257
+geranium_yahia_2.dng,Geranium,sidi_mechreg_Parcelle_Yahia_4,12533760,1931809,10601951,0.1541,-0.0374,-0.0407,0.0653,0.0803,-0.2207,-0.2103,-0.1924,-0.1931
+lavande_kemel_1.dng,Lavande,sidi_mechreg_Parcelle_Kemel_1,12533760,351852,12181908,0.0281,0.1601,0.1375,0.369,0.1619,-0.1573,-0.1563,-0.1484,-0.1539
+romarin_kemel_1.dng,Romarin,sidi_mechreg_Parcelle_Kemel_1,12533760,133086,12400674,0.0106,0.0624,0.0557,0.1615,0.0831,-0.0929,-0.0937,-0.0913,-0.0926
+romarin_kemel_2.dng,Romarin,sidi_mechreg_Parcelle_Kemel_1,12533760,8975761,3557999,0.7161,-0.1505,-0.1603,-0.0916,0.0751,-0.2513,-0.248,-0.1791,-0.1811
+romarin_yahia_1.dng,Romarin,sidi_mechreg_Parcelle_Yahia_4,12533760,1174203,11359557,0.0937,-0.1451,-0.1519,-0.0732,0.0583,-0.29,-0.2874,-0.2764,-0.2806
+romarin_yahia_2.dng,Romarin,sidi_mechreg_Parcelle_Yahia_4,12533760,543529,11990231,0.0434,-0.1344,-0.1407,-0.0542,0.0631,-0.3064,-0.3068,-0.299,-0.3043
+vervaine_badreddine_1.dng,Verveine,sidi_mechreg_Parcelle_Badreddine_5,12533760,988245,11545515,0.0788,0.0563,0.1026,0.2127,0.1419,-0.2238,-0.2272,-0.2017,-0.2204

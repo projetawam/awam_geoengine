@@ -1,0 +1,535 @@
+site,parcel_id,culture,date,score_composite,n_sources_evidence,sources_evidence,n_capteurs_independants,capteurs_independants,saison,precip_avant_mm,precip_ambiante_mm,STATUT
+makthar,makthar_P1,Amandier,2025-05-27,1.5,1,NDWI,1,S2-Indices,ete,4.8,49.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-05-29,1.5,1,NDWI,1,S2-Indices,ete,0.0,49.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-05-31,1.5,1,NDWI,1,S2-Indices,ete,0.0,49.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-06-01,1.5,1,NDWI,1,S2-Indices,ete,0.0,49.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-07-12,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.6,5.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-07-19,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-07-20,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.3,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-07-31,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-08-13,1.88,2,Landsat-Thermal;NDVI_Landsat_corrobore,1,Thermique-LST,ete,0.1,8.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-08-20,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.0,9.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-08-21,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.2,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-08-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.4,12.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-08-28,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,3.5,14.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-09-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,1.9,13.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2025-09-06,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.6,16.8,PLUIE_PROBABLE
+makthar,makthar_P1,Amandier,2025-10-23,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.7,34.1,PLUIE_PROBABLE
+makthar,makthar_P1,Amandier,2025-10-24,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,30.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-10-25,2.6,3,ECOSTRESS-LST;MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.1,28.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-10-31,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.5,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-11-01,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.5,15.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-11-08,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,2.7,17.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2025-11-16,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.0,14.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P1,Amandier,2025-11-25,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.4,5.7,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P1,Amandier,2025-12-03,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.7,6.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P1,Amandier,2025-12-26,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,1.5,34.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-01-02,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,33.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-01-03,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.2,32.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-01-17,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,3.3,37.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-02-16,3.71,3,ECOSTRESS-LST;SAVI;NDVI_corrobore,2,S2-Indices;Thermique-LST,hiver,4.6,62.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-02-18,2.5,3,NDRE;SAVI;MSAVI,1,S2-Indices,hiver,3.8,51.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-02-21,2.5,2,NDRE;BSI,1,S2-Indices,hiver,1.0,35.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-02-27,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.0,21.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-03-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,12.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P1,Amandier,2026-03-18,2.5,2,SAVI;MSAVI,1,S2-Indices,hiver,11.5,29.0,PLUIE_PROBABLE
+makthar,makthar_P1,Amandier,2026-03-25,2.5,5,NDMI;NDRE;SAVI;MSAVI;BSI,1,S2-Indices,hiver,9.9,40.6,PLUIE_PROBABLE
+makthar,makthar_P1,Amandier,2026-04-25,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,1.9,51.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P1,Amandier,2026-05-04,1.5,1,NDWI,1,S2-Indices,ete,12.6,48.3,PLUIE_PROBABLE
+makthar,makthar_P1,Amandier,2026-05-05,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,12.4,48.4,PLUIE_PROBABLE
+makthar,makthar_P1,Amandier,2026-06-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2026-06-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.8,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2026-06-21,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2026-06-29,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.4,12.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2026-07-11,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,8.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2026-07-14,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P1,Amandier,2026-07-23,2.6,3,Landsat-Thermal;MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-05-12,1.5,1,NDWI,1,S2-Indices,ete,6.5,29.7,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-05-27,1.5,1,NDWI,1,S2-Indices,ete,4.8,49.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-08,2.97,4,MODIS-LST;SAVI;MSAVI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,0.4,3.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-09,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.4,3.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-10,3.01,4,MODIS-LST;SAVI;MSAVI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,0.8,3.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-12,2.02,3,Landsat-Thermal;MODIS-LST;NDVI_Landsat_corrobore,1,Thermique-LST,ete,2.6,5.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-16,2.94,5,MODIS-LST;NDRE;SAVI;MSAVI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,2.6,6.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-18,2.97,7,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,0.7,5.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-19,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-20,4.51,8,Landsat-Thermal;MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,0.3,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-26,2.46,2,NDMI;NDVI_corrobore,1,S2-Indices,ete,1.3,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-27,1.5,1,VV_dB,1,S1-SAR,ete,0.7,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-28,3.31,8,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_Landsat_corrobore;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,0.6,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-30,3.13,6,MODIS-LST;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,0.3,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-07-31,4.5,6,ECOSTRESS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.0,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-05,2.93,6,NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,ete,6.8,11.8,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-08-07,2.86,4,SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,ete,2.8,11.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-09,2.86,6,NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,ete,0.0,11.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-10,2.88,4,SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,ete,0.0,11.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-13,2.25,2,Landsat-Thermal;NDVI_Landsat_corrobore,1,Thermique-LST,ete,0.1,8.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-15,2.5,3,NDRE;SAVI;MSAVI,1,S2-Indices,ete,0.1,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-17,2.65,4,MODIS-LST;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.8,9.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-20,2.9,3,Landsat-Thermal;MODIS-LST;SAVI,2,S2-Indices;Thermique-LST,ete,1.0,9.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-21,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.2,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-25,2.46,3,ECOSTRESS-LST;MODIS-LST;NDVI_corrobore,1,Thermique-LST,ete,4.4,12.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-08-26,1.69,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,5.2,13.1,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-08-28,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,3.5,14.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-09-04,2.46,3,ECOSTRESS-LST;MODIS-LST;NDVI_corrobore,1,Thermique-LST,ete,1.9,13.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2025-09-06,2.02,3,Landsat-Thermal;MODIS-LST;NDVI_Landsat_corrobore,1,Thermique-LST,ete,5.6,16.8,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-09-25,1.5,1,VV_dB,1,S1-SAR,ete,22.7,38.0,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-10-20,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,11.4,51.1,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.7,34.1,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2025-10-24,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,30.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,28.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2025-10-31,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.5,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2025-11-01,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.5,15.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2025-11-08,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,2.7,17.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2025-11-16,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.0,14.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P2,Olivier,2025-11-25,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.4,5.7,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P2,Olivier,2025-12-03,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.7,6.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P2,Olivier,2025-12-06,1.5,1,VV_dB,1,S1-SAR,hiver,2.2,8.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P2,Olivier,2025-12-12,1.5,1,VV_dB,1,S1-SAR,hiver,0.3,5.3,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P2,Olivier,2025-12-13,1.5,1,VV_dB,1,S1-SAR,hiver,0.5,5.5,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P2,Olivier,2025-12-19,1.5,1,VV_dB,1,S1-SAR,hiver,23.2,27.9,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2026-01-03,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.2,32.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-01-17,2.41,2,ECOSTRESS-LST;NDVI_corrobore,1,Thermique-LST,hiver,3.3,37.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-01-22,2.5,2,NDMI;BSI,1,S2-Indices,hiver,27.2,41.6,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2026-01-29,1.5,1,VV_dB,1,S1-SAR,hiver,4.0,54.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-02-04,1.5,1,VV_dB,1,S1-SAR,hiver,11.0,65.4,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2026-02-16,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,62.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-02-18,2.65,3,MODIS-LST;SAVI;MSAVI,2,S2-Indices;Thermique-LST,hiver,3.8,51.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-02-21,1.5,1,BSI,1,S2-Indices,hiver,1.0,35.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-02-27,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.0,21.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-03-25,1.5,1,BSI,1,S2-Indices,hiver,9.9,40.6,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2026-03-28,2.5,2,NDMI;BSI,1,S2-Indices,hiver,1.6,41.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-04-23,1.5,1,VV_dB,1,S1-SAR,ete,1.8,51.2,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-04-25,2.0,2,ECOSTRESS-LST;Landsat-Thermal,1,Thermique-LST,ete,1.9,51.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-04-26,1.5,1,NDWI,1,S2-Indices,ete,2.5,51.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-05-05,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,12.4,48.4,PLUIE_PROBABLE
+makthar,makthar_P2,Olivier,2026-05-14,1.5,1,NDWI,1,S2-Indices,ete,0.5,30.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-05-17,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,4.8,24.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P2,Olivier,2026-06-11,1.5,1,VV_dB,1,S1-SAR,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-06-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-06-16,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,4.2,12.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-06-20,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.8,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-06-21,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-06-23,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,1.2,13.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-06-29,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.4,12.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-07-11,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,8.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-07-14,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-07-22,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-07-23,3.15,3,Landsat-Thermal;MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P2,Olivier,2026-08-10,1.5,1,VV_dB,1,S1-SAR,ete,0.0,4.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-05-14,1.5,1,NDWI,1,S2-Indices,ete,8.8,33.2,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-07-10,2.69,3,MODIS-LST;SAVI;MSAVI,2,S2-Indices;Thermique-LST,ete,0.8,3.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-07-12,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.6,5.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-07-18,2.69,4,MODIS-LST;NDRE;SAVI;MSAVI,2,S2-Indices;Thermique-LST,ete,0.7,5.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-07-19,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-07-20,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.3,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-07-31,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-08-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.0,9.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-08-21,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.2,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-08-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.4,12.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-08-28,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,3.5,14.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-09-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,1.9,13.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2025-09-06,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.6,16.8,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2025-10-14,2.65,3,MODIS-LST;NDMI;BSI,2,S2-Indices;Thermique-LST,ete,2.0,39.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2025-10-23,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.7,34.1,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2025-10-24,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,30.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,28.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2025-10-31,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.5,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2025-11-01,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.5,15.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2025-11-08,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,2.7,17.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2025-11-16,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.0,14.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P3,Sol nu,2025-11-25,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.4,5.7,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P3,Sol nu,2025-12-03,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.7,6.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P3,Sol nu,2025-12-13,2.1,2,BSI;VV_dB,2,S1-SAR;S2-Indices,hiver,0.5,5.5,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P3,Sol nu,2025-12-23,2.15,2,MODIS-LST;NDMI,2,S2-Indices;Thermique-LST,hiver,23.0,33.9,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2025-12-26,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,1.5,34.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-01-02,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,33.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-01-03,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.2,32.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-01-17,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,3.3,37.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-02-16,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,62.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-02-27,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.0,21.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-03-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,12.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P3,Sol nu,2026-03-25,2.5,4,NDMI;SAVI;MSAVI;BSI,1,S2-Indices,hiver,9.9,40.6,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2026-04-25,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,1.9,51.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P3,Sol nu,2026-05-04,1.5,1,NDWI,1,S2-Indices,ete,12.6,48.3,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2026-05-05,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,12.4,48.4,PLUIE_PROBABLE
+makthar,makthar_P3,Sol nu,2026-06-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2026-06-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.8,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2026-06-21,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2026-06-29,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.4,12.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2026-07-11,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,8.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2026-07-14,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P3,Sol nu,2026-07-23,2.25,3,Landsat-Thermal;MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-05-17,1.5,1,NDWI,1,S2-Indices,ete,11.4,41.1,PLUIE_PROBABLE
+makthar,makthar_P4,Sol nu,2025-05-27,1.5,1,NDWI,1,S2-Indices,ete,4.8,49.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2025-06-18,2.5,5,NDMI;NDRE;SAVI;MSAVI;BSI,1,S2-Indices,ete,0.1,8.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-06-20,2.65,5,MODIS-LST;NDMI;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.4,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-06-28,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-08,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.4,3.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-10,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.8,3.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.6,5.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-18,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.7,5.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-19,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-20,4.15,7,Landsat-Thermal;MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.3,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-26,2.0,1,NDMI,1,S2-Indices,ete,1.3,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-28,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,ete,0.6,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-07-31,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-08-13,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.1,8.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-08-17,2.65,3,MODIS-LST;NDMI;BSI,2,S2-Indices;Thermique-LST,ete,0.8,9.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-08-20,3.15,3,Landsat-Thermal;MODIS-LST;NDRE,2,S2-Indices;Thermique-LST,ete,1.0,9.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-08-21,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.2,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-08-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.4,12.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-08-28,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,3.5,14.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-09-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,1.9,13.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2025-09-06,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.6,16.8,PLUIE_PROBABLE
+makthar,makthar_P4,Sol nu,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.7,34.1,PLUIE_PROBABLE
+makthar,makthar_P4,Sol nu,2025-10-24,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,30.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,28.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2025-10-31,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.5,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2025-11-01,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.5,15.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2025-11-08,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,2.7,17.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2025-11-16,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.0,14.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P4,Sol nu,2025-11-25,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.4,5.7,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P4,Sol nu,2025-12-03,1.5,1,Landsat-Thermal,1,Thermique-LST,hiver,0.7,6.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P4,Sol nu,2025-12-26,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,1.5,34.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-01-02,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,33.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-01-03,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.2,32.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-01-17,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,3.3,37.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-02-06,2.5,2,SAVI;MSAVI,1,S2-Indices,hiver,2.1,56.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-02-16,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,62.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-02-18,2.65,4,MODIS-LST;NDRE;SAVI;MSAVI,2,S2-Indices;Thermique-LST,hiver,3.8,51.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-02-27,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.0,21.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-03-18,2.5,4,NDMI;SAVI;MSAVI;BSI,1,S2-Indices,hiver,11.5,29.0,PLUIE_PROBABLE
+makthar,makthar_P4,Sol nu,2026-03-25,2.5,4,NDMI;SAVI;MSAVI;BSI,1,S2-Indices,hiver,9.9,40.6,PLUIE_PROBABLE
+makthar,makthar_P4,Sol nu,2026-04-24,1.5,1,NDWI,1,S2-Indices,ete,1.8,51.2,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-04-25,2.0,2,ECOSTRESS-LST;Landsat-Thermal,1,Thermique-LST,ete,1.9,51.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-04-26,1.5,1,NDWI,1,S2-Indices,ete,2.5,51.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-04-29,1.5,1,NDWI,1,S2-Indices,ete,3.9,47.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-05-05,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,12.4,48.4,PLUIE_PROBABLE
+makthar,makthar_P4,Sol nu,2026-05-26,1.5,1,NDWI,1,S2-Indices,ete,0.2,22.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P4,Sol nu,2026-06-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-06-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.8,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-06-21,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-06-29,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.4,12.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-07-11,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,8.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-07-14,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-07-22,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P4,Sol nu,2026-07-23,2.25,3,Landsat-Thermal;MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-06-21,2.5,3,NDRE;SAVI;MSAVI,1,S2-Indices,ete,0.4,6.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-06-23,2.5,2,SAVI;MSAVI,1,S2-Indices,ete,0.3,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-07-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.6,5.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-07-19,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-07-20,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.3,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-07-31,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-08-13,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.1,8.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-08-20,4.5,4,Landsat-Thermal;MODIS-LST;SAVI;MSAVI,2,S2-Indices;Thermique-LST,ete,1.0,9.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-08-21,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.2,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-08-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.4,12.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-08-28,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,3.5,14.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-09-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,1.9,13.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2025-09-06,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.6,16.8,PLUIE_PROBABLE
+makthar,makthar_P5,Sol nu,2025-10-23,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.7,34.1,PLUIE_PROBABLE
+makthar,makthar_P5,Sol nu,2025-10-24,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,30.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,28.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2025-10-31,1.88,1,Landsat-Thermal,1,Thermique-LST,ete,0.5,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2025-11-01,1.88,1,Landsat-Thermal,1,Thermique-LST,hiver,0.5,15.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2025-11-08,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,2.7,17.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2025-11-13,1.65,2,MODIS-LST;NDRE,2,S2-Indices;Thermique-LST,hiver,0.3,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2025-11-16,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.0,14.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P5,Sol nu,2025-11-25,1.88,1,Landsat-Thermal,1,Thermique-LST,hiver,0.4,5.7,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P5,Sol nu,2025-12-03,1.88,1,Landsat-Thermal,1,Thermique-LST,hiver,0.7,6.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P5,Sol nu,2026-01-03,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.2,32.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-01-17,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,3.3,37.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-02-16,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,62.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-02-27,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.0,21.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-03-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,12.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P5,Sol nu,2026-03-28,1.5,1,BSI,1,S2-Indices,hiver,1.6,41.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-04-25,2.0,2,ECOSTRESS-LST;Landsat-Thermal,1,Thermique-LST,ete,1.9,51.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-04-26,1.5,1,NDWI,1,S2-Indices,ete,2.5,51.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-05-05,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,12.4,48.4,PLUIE_PROBABLE
+makthar,makthar_P5,Sol nu,2026-05-26,1.5,1,NDWI,1,S2-Indices,ete,0.2,22.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P5,Sol nu,2026-06-12,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-06-20,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.8,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-06-21,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-06-29,1.88,1,Landsat-Thermal,1,Thermique-LST,ete,0.4,12.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-07-11,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,8.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-07-14,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-07-15,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,7.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-07-22,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-07-23,2.25,3,Landsat-Thermal;MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P5,Sol nu,2026-08-07,1.5,1,NDWI,1,S2-Indices,ete,0.6,4.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,1.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-07-06,1.69,2,MODIS-LST;BSI,2,S2-Indices;Thermique-LST,ete,2.1,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-07-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.6,5.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-07-19,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-07-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.3,5.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-07-31,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.0,7.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-08-05,2.5,3,NDMI;NDRE;BSI,1,S2-Indices,ete,6.8,11.8,PLUIE_PROBABLE
+makthar,makthar_P6,Sol nu,2025-08-15,1.5,1,NDWI,1,S2-Indices,ete,0.1,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-08-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.0,9.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-08-21,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.2,8.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-08-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.4,12.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-08-28,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,3.5,14.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-09-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,1.9,13.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2025-09-06,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.6,16.8,PLUIE_PROBABLE
+makthar,makthar_P6,Sol nu,2025-09-14,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.9,21.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-10-07,1.88,1,Landsat-Thermal,1,Thermique-LST,ete,0.8,40.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-10-23,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,5.7,34.1,PLUIE_PROBABLE
+makthar,makthar_P6,Sol nu,2025-10-24,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,30.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,28.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-10-31,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.5,16.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-11-01,1.88,1,Landsat-Thermal,1,Thermique-LST,hiver,0.5,15.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-11-08,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,2.7,17.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2025-11-16,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.0,14.0,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P6,Sol nu,2025-11-25,1.88,1,Landsat-Thermal,1,Thermique-LST,hiver,0.4,5.7,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P6,Sol nu,2025-12-03,1.88,1,Landsat-Thermal,1,Thermique-LST,hiver,0.7,6.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P6,Sol nu,2026-01-03,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,hiver,0.2,32.4,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-01-14,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.9,35.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-01-17,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,3.3,37.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-02-27,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,0.0,21.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-03-04,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,0.2,12.6,IRRIGATION_PROBABLE (confiance moyenne)
+makthar,makthar_P6,Sol nu,2026-03-18,2.5,2,SAVI;MSAVI,1,S2-Indices,hiver,11.5,29.0,PLUIE_PROBABLE
+makthar,makthar_P6,Sol nu,2026-03-25,2.5,5,NDMI;NDRE;SAVI;MSAVI;BSI,1,S2-Indices,hiver,9.9,40.6,PLUIE_PROBABLE
+makthar,makthar_P6,Sol nu,2026-04-25,2.0,2,ECOSTRESS-LST;Landsat-Thermal,1,Thermique-LST,ete,1.9,51.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-04-26,1.5,1,NDWI,1,S2-Indices,ete,2.5,51.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-05-05,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,12.4,48.4,PLUIE_PROBABLE
+makthar,makthar_P6,Sol nu,2026-05-11,2.1,2,Landsat-Thermal;VV_dB,2,S1-SAR;Thermique-LST,ete,0.6,49.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+makthar,makthar_P6,Sol nu,2026-06-12,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.6,12.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2026-06-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,2.8,12.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2026-06-29,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.4,12.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2026-07-11,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.0,8.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2026-07-14,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,8.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2026-07-15,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,7.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+makthar,makthar_P6,Sol nu,2026-07-22,2.0,3,ECOSTRESS-LST;Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-05-27,1.5,1,NDWI,1,S2-Indices,ete,1.3,61.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-06-01,1.5,1,NDWI,1,S2-Indices,ete,0.0,61.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.1,2.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-07-03,1.92,3,Landsat-Thermal;MODIS-LST;NDVI_corrobore,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-07-10,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.4,2.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-07-21,2.41,2,ECOSTRESS-LST;NDVI_corrobore,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-07-26,2.69,4,MODIS-LST;NDRE;SAVI;MSAVI,2,S2-Indices;Thermique-LST,ete,0.9,3.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-08-05,2.5,2,NDRE;BSI,1,S2-Indices,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-08-20,4.0,3,Landsat-Thermal;NDMI;BSI,2,S2-Indices;Thermique-LST,ete,1.4,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-08-21,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.2,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-08-25,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.3,2.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-08-28,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.8,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-09-01,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-09-11,2.65,3,MODIS-LST;NDWI;BSI,2,S2-Indices;Thermique-LST,ete,21.9,26.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-09-15,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.3,25.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-09-19,1.82,2,NDWI;NDVI_corrobore,1,S2-Indices,ete,0.0,25.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-01,1.77,2,VV_dB;NDVI_corrobore,1,S1-SAR,ete,7.3,47.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-14,2.5,3,NDMI;NDRE;BSI,1,S2-Indices,ete,1.3,29.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-15,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,5.7,33.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-19,1.5,1,VV_dB,1,S1-SAR,ete,29.7,58.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,7.2,54.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.0,52.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-10-31,4.27,5,Landsat-Thermal;NDMI;NDRE;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,4.8,43.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-01,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,42.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-07,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,9.9,49.9,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-12,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,18.1,67.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-13,5.0,4,ECOSTRESS-LST;MODIS-LST;NDRE;VV_dB,3,S1-SAR;S2-Indices;Thermique-LST,hiver,10.3,66.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-18,1.5,1,VV_dB,1,S1-SAR,hiver,9.2,46.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-19,1.5,1,VV_dB,1,S1-SAR,hiver,9.9,46.9,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-24,1.5,1,VV_dB,1,S1-SAR,hiver,22.2,65.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-25,1.5,1,VV_dB,1,S1-SAR,hiver,21.4,67.3,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-11-30,2.13,3,MODIS-LST;VV_dB;NDVI_corrobore,2,S1-SAR;Thermique-LST,hiver,32.0,94.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-12-03,2.5,3,NDMI;NDRE;BSI,1,S2-Indices,hiver,3.2,93.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-12-28,2.79,6,NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,hiver,1.9,58.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2025-12-30,2.82,4,NDMI;NDWI;BSI;NDVI_corrobore,1,S2-Indices,hiver,4.8,59.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-01-09,2.77,5,NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,hiver,14.4,52.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-01-12,2.82,4,NDMI;NDWI;BSI;NDVI_corrobore,1,S2-Indices,hiver,11.9,61.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-01-22,2.82,4,NDRE;SAVI;MSAVI;NDVI_corrobore,1,S2-Indices,hiver,49.8,91.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-01-23,1.5,1,VV_dB,1,S1-SAR,hiver,51.9,93.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-02-01,2.69,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,hiver,61.2,170.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-02-06,2.5,2,SAVI;MSAVI,1,S2-Indices,hiver,8.3,166.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-02-10,1.5,1,VV_dB,1,S1-SAR,hiver,17.4,172.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-02-26,2.82,5,NDMI;SAVI;MSAVI;BSI;NDVI_corrobore,1,S2-Indices,hiver,0.2,116.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-03-18,2.5,3,NDMI;NDRE;BSI,1,S2-Indices,hiver,28.1,54.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-03-20,2.5,5,NDMI;NDRE;SAVI;MSAVI;BSI,1,S2-Indices,hiver,17.6,52.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-03-30,2.01,3,MODIS-LST;NDWI;NDVI_corrobore,2,S2-Indices;Thermique-LST,hiver,13.9,68.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-04-07,2.5,5,NDMI;NDRE;SAVI;MSAVI;BSI,1,S2-Indices,ete,3.7,99.2,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-04-19,2.5,4,NDRE;SAVI;MSAVI;BSI,1,S2-Indices,ete,26.9,104.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-04-29,1.65,2,MODIS-LST;NDWI,2,S2-Indices;Thermique-LST,ete,0.4,84.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-05-12,3.0,2,NDWI;VV_dB,2,S1-SAR;S2-Indices,ete,2.0,56.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-05-17,3.46,3,NDWI;VV_dB;NDVI_corrobore,2,S1-SAR;S2-Indices,ete,3.8,15.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-05-19,1.5,1,NDWI,1,S2-Indices,ete,3.4,15.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-05-22,1.5,1,NDWI,1,S2-Indices,ete,0.0,15.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-05-27,1.5,1,NDWI,1,S2-Indices,ete,0.0,15.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-06-11,3.0,2,NDWI;VV_dB,2,S1-SAR;S2-Indices,ete,0.1,4.5,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-06-16,1.5,1,NDWI,1,S2-Indices,ete,9.5,10.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-06-18,1.5,1,NDWI,1,S2-Indices,ete,9.5,10.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-06-22,1.5,1,VV_dB,1,S1-SAR,ete,0.0,10.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-06-23,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,1.3,11.4,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-06-29,1.5,1,VV_dB,1,S1-SAR,ete,0.0,11.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-07-14,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,14.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,2026-07-30,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.3,3.9,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-06-15,1.5,1,VV_dB,1,S1-SAR,ete,0.0,4.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.1,2.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-07-03,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-07-09,1.5,1,VV_dB,1,S1-SAR,ete,0.5,2.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-07-10,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.4,2.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-07-16,1.65,2,MODIS-LST;BSI,2,S2-Indices;Thermique-LST,ete,1.2,3.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-07-17,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.8,3.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-07-21,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-08-02,1.5,1,VV_dB,1,S1-SAR,ete,0.2,3.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-08-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,1.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-08-20,1.69,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.4,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-08-21,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.2,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-08-25,2.38,2,ECOSTRESS-LST;NDVI_corrobore,1,Thermique-LST,ete,0.3,2.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-08-28,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,0.8,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-08-30,2.5,2,NDMI;BSI,1,S2-Indices,ete,1.0,3.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-09-01,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-09-04,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,1.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-09-11,2.5,3,NDMI;NDWI;BSI,1,S2-Indices,ete,21.9,26.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-09-19,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.0,25.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-10-01,1.5,1,VV_dB,1,S1-SAR,ete,7.3,47.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-10-19,1.5,1,VV_dB,1,S1-SAR,ete,29.7,58.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,7.2,54.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.0,52.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-10-31,4.0,3,Landsat-Thermal;NDRE;SAVI,2,S2-Indices;Thermique-LST,ete,4.8,43.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-11-01,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,42.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-11-07,1.5,1,VV_dB,1,S1-SAR,hiver,9.9,49.9,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-11-12,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,18.1,67.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2025-11-13,2.65,5,MODIS-LST;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,hiver,10.3,66.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-11-18,1.5,1,VV_dB,1,S1-SAR,hiver,9.2,46.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-11-24,1.5,1,VV_dB,1,S1-SAR,hiver,22.2,65.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-11-28,2.95,4,NDMI;NDWI;BSI;NDVI_corrobore,1,S2-Indices,hiver,32.0,96.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-11-30,4.3,4,NDRE;SAVI;VV_dB;NDVI_corrobore,2,S1-SAR;S2-Indices,hiver,32.0,94.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-12-08,2.5,2,SAVI;MSAVI,1,S2-Indices,hiver,27.0,104.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-12-10,2.5,3,NDRE;SAVI;MSAVI,1,S2-Indices,hiver,2.0,94.2,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-12-13,1.5,1,NDRE,1,S2-Indices,hiver,0.2,94.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2025-12-28,2.5,4,NDMI;SAVI;MSAVI;BSI,1,S2-Indices,hiver,1.9,58.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-01-02,2.98,5,MODIS-LST;NDMI;NDRE;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,hiver,9.4,64.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2026-01-14,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,9.6,58.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,2026-01-17,1.5,1,VV_dB,1,S1-SAR,hiver,6.2,64.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-01-23,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,51.9,93.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-02-01,2.65,4,MODIS-LST;NDMI;NDWI;BSI,2,S2-Indices;Thermique-LST,hiver,61.2,170.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-02-04,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,36.6,176.9,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-03-24,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,6.4,54.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-03-30,3.0,2,BSI;VV_dB,2,S1-SAR;S2-Indices,hiver,13.9,68.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-05-05,1.5,1,VV_dB,1,S1-SAR,ete,1.8,47.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-05-11,1.88,1,Landsat-Thermal,1,Thermique-LST,ete,7.8,57.0,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-05-12,3.0,2,NDWI;VV_dB,2,S1-SAR;S2-Indices,ete,2.0,56.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-05-17,3.0,2,NDWI;VV_dB,2,S1-SAR;S2-Indices,ete,3.8,15.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-07-06,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,2.5,14.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-07-14,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,14.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-07-22,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Géranium,2026-07-23,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.6,4.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-05-27,1.5,1,NDRE,1,S2-Indices,ete,1.3,61.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.1,2.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-07-03,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-07-10,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.4,2.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-07-17,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.8,3.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-07-21,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-08-05,2.5,4,NDMI;NDRE;SAVI;BSI,1,S2-Indices,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-08-12,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,1.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-08-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.4,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-08-21,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.2,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-08-25,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.3,2.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-08-30,2.5,2,NDMI;BSI,1,S2-Indices,ete,1.0,3.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-09-01,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-09-04,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,1.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-09-11,2.5,2,NDMI;BSI,1,S2-Indices,ete,21.9,26.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-09-29,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,12.8,46.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,7.2,54.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.0,52.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-10-31,4.0,3,Landsat-Thermal;NDRE;SAVI,2,S2-Indices;Thermique-LST,ete,4.8,43.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-11-01,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,42.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-11-13,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,hiver,10.3,66.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-11-28,2.5,3,NDMI;NDWI;BSI,1,S2-Indices,hiver,32.0,96.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-11-30,3.1,4,NDRE;SAVI;MSAVI;VV_dB,2,S1-SAR;S2-Indices,hiver,32.0,94.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-12-08,2.5,2,SAVI;MSAVI,1,S2-Indices,hiver,27.0,104.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-12-10,2.5,3,NDRE;SAVI;MSAVI,1,S2-Indices,hiver,2.0,94.2,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-12-13,1.5,1,NDRE,1,S2-Indices,hiver,0.2,94.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2025-12-28,2.5,4,NDMI;SAVI;MSAVI;BSI,1,S2-Indices,hiver,1.9,58.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-01-02,2.65,3,MODIS-LST;NDMI;BSI,2,S2-Indices;Thermique-LST,hiver,9.4,64.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-01-14,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,hiver,9.6,58.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-02-01,2.65,3,MODIS-LST;NDWI;BSI,2,S2-Indices;Thermique-LST,hiver,61.2,170.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-03-30,3.1,3,NDMI;BSI;VV_dB,2,S1-SAR;S2-Indices,hiver,13.9,68.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-05-02,1.5,1,NDWI,1,S2-Indices,ete,0.4,49.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-05-11,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,7.8,57.0,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-05-12,1.5,1,NDWI,1,S2-Indices,ete,2.0,56.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-05-17,1.5,1,NDWI,1,S2-Indices,ete,3.8,15.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-07-06,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,2.5,14.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-07-22,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,Aucune,2026-07-28,2.5,3,NDMI;NDRE;BSI,1,S2-Indices,ete,0.6,4.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-07-03,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-07-16,2.65,3,MODIS-LST;NDMI;BSI,2,S2-Indices;Thermique-LST,ete,1.2,3.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-08-12,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.0,1.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-08-20,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.4,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-08-28,1.86,2,Landsat-Thermal;NDVI_Landsat_corrobore,1,Thermique-LST,ete,0.8,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-08-30,2.5,4,NDMI;NDRE;SAVI;BSI,1,S2-Indices,ete,1.0,3.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-09-11,1.5,1,BSI,1,S2-Indices,ete,21.9,26.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-09-19,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,0.0,25.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-10-01,2.5,2,NDWI;BSI,1,S2-Indices,ete,7.3,47.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-10-19,1.5,1,VV_dB,1,S1-SAR,ete,29.7,58.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,7.2,54.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-10-24,3.02,5,MODIS-LST;NDRE;SAVI;MSAVI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,4.0,53.2,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-10-31,4.64,7,Landsat-Thermal;NDMI;NDRE;SAVI;MSAVI;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,ete,4.8,43.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-11-07,1.5,1,VV_dB,1,S1-SAR,hiver,9.9,49.9,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-11-12,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,18.1,67.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-11-13,2.65,6,MODIS-LST;NDMI;NDRE;SAVI;MSAVI;BSI,2,S2-Indices;Thermique-LST,hiver,10.3,66.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-11-18,1.5,1,VV_dB,1,S1-SAR,hiver,9.2,46.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-11-24,1.5,1,VV_dB,1,S1-SAR,hiver,22.2,65.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-11-30,1.5,1,VV_dB,1,S1-SAR,hiver,32.0,94.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-12-13,1.5,1,NDRE,1,S2-Indices,hiver,0.2,94.5,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2025-12-28,2.5,4,NDMI;SAVI;MSAVI;BSI,1,S2-Indices,hiver,1.9,58.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-01-02,3.02,4,MODIS-LST;NDMI;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,hiver,9.4,64.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-01-09,1.5,1,NDRE,1,S2-Indices,hiver,14.4,52.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-01-23,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,51.9,93.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-02-01,3.06,5,MODIS-LST;NDMI;NDWI;BSI;NDVI_corrobore,2,S2-Indices;Thermique-LST,hiver,61.2,170.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-03-24,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,6.4,54.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-03-30,1.86,2,VV_dB;NDVI_corrobore,1,S1-SAR,hiver,13.9,68.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-04-29,1.5,1,NDWI,1,S2-Indices,ete,0.4,84.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-05-02,1.5,1,NDWI,1,S2-Indices,ete,0.4,49.7,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-05-11,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,7.8,57.0,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-05-12,1.5,1,NDWI,1,S2-Indices,ete,2.0,56.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-05-17,1.5,1,NDWI,1,S2-Indices,ete,3.8,15.9,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-07-06,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,2.5,14.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-07-22,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,Caroubier,2026-07-28,2.5,3,NDMI;NDWI;BSI,1,S2-Indices,ete,0.6,4.0,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-06-29,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.1,2.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-07-03,1.9,3,Landsat-Thermal;MODIS-LST;NDVI_corrobore,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-07-09,1.5,1,VV_dB,1,S1-SAR,ete,0.5,2.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-07-10,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.4,2.6,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-07-13,2.65,3,MODIS-LST;NDMI;BSI,2,S2-Indices;Thermique-LST,ete,1.2,3.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-07-17,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.8,3.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-07-21,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.1,2.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-08-02,1.93,2,VV_dB;NDVI_corrobore,1,S1-SAR,ete,0.2,3.2,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-08-05,2.5,5,NDMI;NDRE;SAVI;MSAVI;BSI,1,S2-Indices,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-08-20,2.0,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,1.4,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-08-21,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.2,2.7,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-08-25,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,0.3,2.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-09-01,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,0.2,2.8,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-09-04,2.0,1,ECOSTRESS-LST,1,Thermique-LST,ete,1.3,4.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-09-19,1.69,2,MODIS-LST;BSI,2,S2-Indices;Thermique-LST,ete,0.0,25.0,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-10-19,1.5,1,VV_dB,1,S1-SAR,ete,29.7,58.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-10-20,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,ete,25.3,58.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-10-23,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,7.2,54.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-10-25,2.0,2,ECOSTRESS-LST;MODIS-LST,1,Thermique-LST,ete,4.0,52.3,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-10-31,3.0,2,Landsat-Thermal;NDRE,2,S2-Indices;Thermique-LST,ete,4.8,43.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-11-01,2.0,1,ECOSTRESS-LST,1,Thermique-LST,hiver,4.6,42.1,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,2025-11-13,2.69,4,MODIS-LST;NDMI;NDRE;BSI,2,S2-Indices;Thermique-LST,hiver,10.3,66.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-11-18,1.5,1,VV_dB,1,S1-SAR,hiver,9.2,46.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-11-24,1.5,1,VV_dB,1,S1-SAR,hiver,22.2,65.1,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-11-30,1.5,1,VV_dB,1,S1-SAR,hiver,32.0,94.5,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-12-24,1.5,1,VV_dB,1,S1-SAR,hiver,16.3,88.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2025-12-28,2.5,4,NDRE;SAVI;MSAVI;BSI,1,S2-Indices,hiver,1.9,58.6,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-01-02,2.65,4,MODIS-LST;NDMI;NDRE;BSI,2,S2-Indices;Thermique-LST,hiver,9.4,64.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-01-22,2.0,1,NDMI,1,S2-Indices,hiver,49.8,91.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-01-23,1.69,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,51.9,93.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-02-01,2.69,3,MODIS-LST;NDMI;BSI,2,S2-Indices;Thermique-LST,hiver,61.2,170.7,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-02-04,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,36.6,176.9,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-02-10,1.5,1,VV_dB,1,S1-SAR,hiver,17.4,172.2,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-03-12,1.5,1,VV_dB,1,S1-SAR,hiver,6.2,44.4,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-03-24,1.65,2,MODIS-LST;VV_dB,2,S1-SAR;Thermique-LST,hiver,6.4,54.8,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-04-17,1.5,1,BSI,1,S2-Indices,ete,44.3,104.6,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-04-29,1.5,1,VV_dB,1,S1-SAR,ete,0.4,84.8,"IRRIGATION_POSSIBLE (confiance BASSE — régime ambiant humide, pluie locale non exclue)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-05-11,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,7.8,57.0,PLUIE_PROBABLE
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-07-06,1.5,1,Landsat-Thermal,1,Thermique-LST,ete,2.5,14.1,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Géranium/Sauge,2026-07-22,1.65,2,Landsat-Thermal;MODIS-LST,1,Thermique-LST,ete,0.6,5.3,"IRRIGATION_PROBABLE (confiance haute — saison sèche, aucune pluie proche)"
