@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-01T09:02:50.658073",
-  "status": "DRY_RUN",
+  "generated_at": "2026-09-01T13:18:02.988078",
+  "status": "LIVE",
   "naming_convention": "AWAM_[SOURCE]_[SITE]_[PARCEL_ID]_[DATATYPE]_[STARTDATE]_[ENDDATE]_v[VERSION].[EXT]",
   "version": "1.0",
   "raster_dir": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters",
@@ -28,7 +28,7 @@
     }
   },
   "rasters_count": 44,
-  "archived_rasters_count": 0,
+  "archived_rasters_count": 40,
   "rasters": [
     {
       "filename": "AWAM_LANDSAT_makthar_ALL_LST_C_20260824_20260824_v1.0.tif",
@@ -55,244 +55,244 @@
       "modified_time": "2026-08-27T13:59:51.662661"
     },
     {
-      "filename": "AWAM_MODIS_makthar_ALL_LST_C_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_MODIS_makthar_ALL_LST_C_20260825_20260825_v1.0.tif",
-      "size_bytes": 990,
-      "modified_time": "2026-08-27T13:57:51.696594"
+      "filename": "AWAM_MODIS_makthar_ALL_LST_C_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_MODIS_makthar_ALL_LST_C_20260830_20260830_v1.0.tif",
+      "size_bytes": 995,
+      "modified_time": "2026-09-01T13:16:43.329256"
     },
     {
-      "filename": "AWAM_MODIS_sidi_mechreg_ALL_LST_C_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_MODIS_sidi_mechreg_ALL_LST_C_20260825_20260825_v1.0.tif",
-      "size_bytes": 1191,
-      "modified_time": "2026-08-27T13:59:53.427048"
+      "filename": "AWAM_MODIS_sidi_mechreg_ALL_LST_C_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_MODIS_sidi_mechreg_ALL_LST_C_20260830_20260830_v1.0.tif",
+      "size_bytes": 1119,
+      "modified_time": "2026-09-01T13:18:02.960904"
     },
     {
-      "filename": "AWAM_S1_makthar_ALL_DpRVIc_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_DpRVIc_20260823_20260823_v1.0.tif",
-      "size_bytes": 131357,
-      "modified_time": "2026-08-27T13:57:47.049956"
+      "filename": "AWAM_S1_makthar_ALL_DpRVIc_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_DpRVIc_20260829_20260829_v1.0.tif",
+      "size_bytes": 131903,
+      "modified_time": "2026-09-01T13:16:40.329579"
     },
     {
-      "filename": "AWAM_S1_makthar_ALL_VH_dB_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_VH_dB_20260823_20260823_v1.0.tif",
-      "size_bytes": 81029,
-      "modified_time": "2026-08-27T13:57:44.698335"
+      "filename": "AWAM_S1_makthar_ALL_VH_dB_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_VH_dB_20260829_20260829_v1.0.tif",
+      "size_bytes": 81597,
+      "modified_time": "2026-09-01T13:16:36.692237"
     },
     {
-      "filename": "AWAM_S1_makthar_ALL_VH_VV_ratio_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_VH_VV_ratio_20260823_20260823_v1.0.tif",
-      "size_bytes": 131388,
-      "modified_time": "2026-08-27T13:57:45.864897"
+      "filename": "AWAM_S1_makthar_ALL_VH_VV_ratio_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_VH_VV_ratio_20260829_20260829_v1.0.tif",
+      "size_bytes": 131974,
+      "modified_time": "2026-09-01T13:16:38.284600"
     },
     {
-      "filename": "AWAM_S1_makthar_ALL_VV_dB_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_VV_dB_20260823_20260823_v1.0.tif",
-      "size_bytes": 79967,
-      "modified_time": "2026-08-27T13:57:43.371179"
+      "filename": "AWAM_S1_makthar_ALL_VV_dB_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_makthar_ALL_VV_dB_20260829_20260829_v1.0.tif",
+      "size_bytes": 79946,
+      "modified_time": "2026-09-01T13:16:35.322051"
     },
     {
-      "filename": "AWAM_S1_sidi_mechreg_ALL_DpRVIc_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_DpRVIc_20260823_20260823_v1.0.tif",
-      "size_bytes": 3071892,
-      "modified_time": "2026-08-27T13:59:46.798806"
+      "filename": "AWAM_S1_sidi_mechreg_ALL_DpRVIc_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_DpRVIc_20260829_20260829_v1.0.tif",
+      "size_bytes": 3116117,
+      "modified_time": "2026-09-01T13:18:00.105051"
     },
     {
-      "filename": "AWAM_S1_sidi_mechreg_ALL_VH_dB_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_VH_dB_20260823_20260823_v1.0.tif",
-      "size_bytes": 1739147,
-      "modified_time": "2026-08-27T13:59:36.995764"
+      "filename": "AWAM_S1_sidi_mechreg_ALL_VH_dB_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_VH_dB_20260829_20260829_v1.0.tif",
+      "size_bytes": 1763245,
+      "modified_time": "2026-09-01T13:17:55.307658"
     },
     {
-      "filename": "AWAM_S1_sidi_mechreg_ALL_VH_VV_ratio_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_VH_VV_ratio_20260823_20260823_v1.0.tif",
-      "size_bytes": 3070167,
-      "modified_time": "2026-08-27T13:59:39.537394"
+      "filename": "AWAM_S1_sidi_mechreg_ALL_VH_VV_ratio_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_VH_VV_ratio_20260829_20260829_v1.0.tif",
+      "size_bytes": 3113740,
+      "modified_time": "2026-09-01T13:17:57.639308"
     },
     {
-      "filename": "AWAM_S1_sidi_mechreg_ALL_VV_dB_20260823_20260823_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_VV_dB_20260823_20260823_v1.0.tif",
-      "size_bytes": 1755740,
-      "modified_time": "2026-08-27T13:59:29.245032"
+      "filename": "AWAM_S1_sidi_mechreg_ALL_VV_dB_20260829_20260829_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S1_sidi_mechreg_ALL_VV_dB_20260829_20260829_v1.0.tif",
+      "size_bytes": 1769165,
+      "modified_time": "2026-09-01T13:17:49.055045"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_BSI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_BSI_20260825_20260825_v1.0.tif",
-      "size_bytes": 58412,
-      "modified_time": "2026-08-27T13:57:31.097551"
+      "filename": "AWAM_S2_makthar_ALL_BSI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_BSI_20260830_20260830_v1.0.tif",
+      "size_bytes": 60517,
+      "modified_time": "2026-09-01T13:16:26.748280"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_Carbonate_SWIR_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_Carbonate_SWIR_20260825_20260825_v1.0.tif",
-      "size_bytes": 15987,
-      "modified_time": "2026-08-27T13:57:32.680943"
+      "filename": "AWAM_S2_makthar_ALL_Carbonate_SWIR_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_Carbonate_SWIR_20260830_20260830_v1.0.tif",
+      "size_bytes": 16303,
+      "modified_time": "2026-09-01T13:16:28.304360"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_CI_RedEdge_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_CI_RedEdge_20260825_20260825_v1.0.tif",
-      "size_bytes": 18016,
-      "modified_time": "2026-08-27T13:57:19.434968"
+      "filename": "AWAM_S2_makthar_ALL_CI_RedEdge_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_CI_RedEdge_20260830_20260830_v1.0.tif",
+      "size_bytes": 18341,
+      "modified_time": "2026-09-01T13:16:20.383353"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_EVI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_EVI_20260825_20260825_v1.0.tif",
-      "size_bytes": 125106,
-      "modified_time": "2026-08-27T13:57:15.552112"
+      "filename": "AWAM_S2_makthar_ALL_EVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_EVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 130841,
+      "modified_time": "2026-09-01T13:16:15.460148"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_fCover_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_fCover_20260825_20260825_v1.0.tif",
-      "size_bytes": 78966,
-      "modified_time": "2026-08-27T13:57:41.116307"
+      "filename": "AWAM_S2_makthar_ALL_fCover_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_fCover_20260830_20260830_v1.0.tif",
+      "size_bytes": 84252,
+      "modified_time": "2026-09-01T13:16:33.804782"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_MSAVI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_MSAVI_20260825_20260825_v1.0.tif",
-      "size_bytes": 122890,
-      "modified_time": "2026-08-27T13:57:11.687128"
+      "filename": "AWAM_S2_makthar_ALL_MSAVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_MSAVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 128485,
+      "modified_time": "2026-09-01T13:16:14.036373"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_NDMI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDMI_20260825_20260825_v1.0.tif",
-      "size_bytes": 59576,
-      "modified_time": "2026-08-27T13:57:29.165336"
+      "filename": "AWAM_S2_makthar_ALL_NDMI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDMI_20260830_20260830_v1.0.tif",
+      "size_bytes": 62134,
+      "modified_time": "2026-09-01T13:16:25.436155"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_NDRE_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDRE_20260825_20260825_v1.0.tif",
-      "size_bytes": 61108,
-      "modified_time": "2026-08-27T13:57:17.747033"
+      "filename": "AWAM_S2_makthar_ALL_NDRE_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDRE_20260830_20260830_v1.0.tif",
+      "size_bytes": 63580,
+      "modified_time": "2026-09-01T13:16:18.419924"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_NDSI_soil_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDSI_soil_20260825_20260825_v1.0.tif",
-      "size_bytes": 58381,
-      "modified_time": "2026-08-27T13:57:34.052986"
+      "filename": "AWAM_S2_makthar_ALL_NDSI_soil_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDSI_soil_20260830_20260830_v1.0.tif",
+      "size_bytes": 60814,
+      "modified_time": "2026-09-01T13:16:29.425405"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_NDVI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDVI_20260825_20260825_v1.0.tif",
-      "size_bytes": 59722,
-      "modified_time": "2026-08-27T13:57:05.465210"
+      "filename": "AWAM_S2_makthar_ALL_NDVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 62124,
+      "modified_time": "2026-09-01T13:16:10.940249"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_NDWI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDWI_20260825_20260825_v1.0.tif",
-      "size_bytes": 58450,
-      "modified_time": "2026-08-27T13:57:26.764347"
+      "filename": "AWAM_S2_makthar_ALL_NDWI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_NDWI_20260830_20260830_v1.0.tif",
+      "size_bytes": 60759,
+      "modified_time": "2026-09-01T13:16:24.020830"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_RGB_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_RGB_20260825_20260825_v1.0.tif",
-      "size_bytes": 125104,
-      "modified_time": "2026-08-27T13:57:02.717188"
+      "filename": "AWAM_S2_makthar_ALL_RGB_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_RGB_20260830_20260830_v1.0.tif",
+      "size_bytes": 128965,
+      "modified_time": "2026-09-01T13:16:09.101612"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_SAVI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_SAVI_20260825_20260825_v1.0.tif",
-      "size_bytes": 124061,
-      "modified_time": "2026-08-27T13:57:07.642816"
+      "filename": "AWAM_S2_makthar_ALL_SAVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_SAVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 129536,
+      "modified_time": "2026-09-01T13:16:12.651682"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_SI_soil_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_SI_soil_20260825_20260825_v1.0.tif",
-      "size_bytes": 122766,
-      "modified_time": "2026-08-27T13:57:36.390057"
+      "filename": "AWAM_S2_makthar_ALL_SI_soil_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_SI_soil_20260830_20260830_v1.0.tif",
+      "size_bytes": 128202,
+      "modified_time": "2026-09-01T13:16:30.797618"
     },
     {
-      "filename": "AWAM_S2_makthar_ALL_VARI_20260825_20260825_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_VARI_20260825_20260825_v1.0.tif",
-      "size_bytes": 58419,
-      "modified_time": "2026-08-27T13:57:22.355600"
+      "filename": "AWAM_S2_makthar_ALL_VARI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_makthar_ALL_VARI_20260830_20260830_v1.0.tif",
+      "size_bytes": 60806,
+      "modified_time": "2026-09-01T13:16:22.515004"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_BSI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_BSI_20260820_20260820_v1.0.tif",
-      "size_bytes": 1477791,
-      "modified_time": "2026-08-27T13:58:50.250942"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_BSI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_BSI_20260830_20260830_v1.0.tif",
+      "size_bytes": 1312534,
+      "modified_time": "2026-09-01T13:17:30.876052"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_Carbonate_SWIR_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_Carbonate_SWIR_20260820_20260820_v1.0.tif",
-      "size_bytes": 374733,
-      "modified_time": "2026-08-27T13:58:53.516952"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_Carbonate_SWIR_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_Carbonate_SWIR_20260830_20260830_v1.0.tif",
+      "size_bytes": 326600,
+      "modified_time": "2026-09-01T13:17:33.746527"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_CI_RedEdge_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_CI_RedEdge_20260820_20260820_v1.0.tif",
-      "size_bytes": 396222,
-      "modified_time": "2026-08-27T13:58:28.649045"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_CI_RedEdge_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_CI_RedEdge_20260830_20260830_v1.0.tif",
+      "size_bytes": 356148,
+      "modified_time": "2026-09-01T13:17:11.727123"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_EVI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_EVI_20260820_20260820_v1.0.tif",
-      "size_bytes": 3033745,
-      "modified_time": "2026-08-27T13:58:17.556543"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_EVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_EVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 2671503,
+      "modified_time": "2026-09-01T13:17:01.858208"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_fCover_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_fCover_20260820_20260820_v1.0.tif",
-      "size_bytes": 3023818,
-      "modified_time": "2026-08-27T13:59:23.527316"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_fCover_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_fCover_20260830_20260830_v1.0.tif",
+      "size_bytes": 2658378,
+      "modified_time": "2026-09-01T13:17:44.666925"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_MSAVI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_MSAVI_20260820_20260820_v1.0.tif",
-      "size_bytes": 2911709,
-      "modified_time": "2026-08-27T13:58:14.875632"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_MSAVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_MSAVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 2613839,
+      "modified_time": "2026-09-01T13:16:58.423972"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_NDMI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDMI_20260820_20260820_v1.0.tif",
-      "size_bytes": 1440142,
-      "modified_time": "2026-08-27T13:58:44.665888"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_NDMI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDMI_20260830_20260830_v1.0.tif",
+      "size_bytes": 1277090,
+      "modified_time": "2026-09-01T13:17:23.282459"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_NDRE_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDRE_20260820_20260820_v1.0.tif",
-      "size_bytes": 1388499,
-      "modified_time": "2026-08-27T13:58:24.914780"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_NDRE_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDRE_20260830_20260830_v1.0.tif",
+      "size_bytes": 1242291,
+      "modified_time": "2026-09-01T13:17:08.888416"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_NDSI_soil_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDSI_soil_20260820_20260820_v1.0.tif",
-      "size_bytes": 1391892,
-      "modified_time": "2026-08-27T13:59:13.197064"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_NDSI_soil_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDSI_soil_20260830_20260830_v1.0.tif",
+      "size_bytes": 1242170,
+      "modified_time": "2026-09-01T13:17:36.564324"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_NDVI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDVI_20260820_20260820_v1.0.tif",
-      "size_bytes": 1399553,
-      "modified_time": "2026-08-27T13:58:05.965809"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_NDVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 1255261,
+      "modified_time": "2026-09-01T13:16:52.280659"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_NDWI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDWI_20260820_20260820_v1.0.tif",
-      "size_bytes": 1391626,
-      "modified_time": "2026-08-27T13:58:41.858346"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_NDWI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_NDWI_20260830_20260830_v1.0.tif",
+      "size_bytes": 1249356,
+      "modified_time": "2026-09-01T13:17:17.691616"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_RGB_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_RGB_20260820_20260820_v1.0.tif",
-      "size_bytes": 2573815,
-      "modified_time": "2026-08-27T13:58:01.897043"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_RGB_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_RGB_20260830_20260830_v1.0.tif",
+      "size_bytes": 2402126,
+      "modified_time": "2026-09-01T13:16:48.785937"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_SAVI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_SAVI_20260820_20260820_v1.0.tif",
-      "size_bytes": 2877623,
-      "modified_time": "2026-08-27T13:58:11.690349"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_SAVI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_SAVI_20260830_20260830_v1.0.tif",
+      "size_bytes": 2613463,
+      "modified_time": "2026-09-01T13:16:55.003548"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_SI_soil_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_SI_soil_20260820_20260820_v1.0.tif",
-      "size_bytes": 2849078,
-      "modified_time": "2026-08-27T13:59:16.337722"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_SI_soil_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_SI_soil_20260830_20260830_v1.0.tif",
+      "size_bytes": 2559475,
+      "modified_time": "2026-09-01T13:17:39.696679"
     },
     {
-      "filename": "AWAM_S2_sidi_mechreg_ALL_VARI_20260820_20260820_v1.0.tif",
-      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_VARI_20260820_20260820_v1.0.tif",
-      "size_bytes": 1441810,
-      "modified_time": "2026-08-27T13:58:34.230346"
+      "filename": "AWAM_S2_sidi_mechreg_ALL_VARI_20260830_20260830_v1.0.tif",
+      "path": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters\\AWAM_S2_sidi_mechreg_ALL_VARI_20260830_20260830_v1.0.tif",
+      "size_bytes": 1294502,
+      "modified_time": "2026-09-01T13:17:15.292722"
     }
   ]
 }

@@ -1,9 +1,22 @@
+# ==============================================================================
+# AWAM GeoEngine .gitignore
+# ==============================================================================
+
+# Environment variables & secrets (CRITICAL)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Pytest / Testing caches
+# Pytest / Testing / Coverage caches
 .pytest_cache/
 .coverage
 htmlcov/
@@ -14,18 +27,21 @@ env/
 venv/
 ENV/
 
-# Temporary data caches & downloads
+# Temporary data caches, pickle files & partial downloads
 .cache/
 **/pixel_indices_database/.cache/
 **/cache_precip/
+**/_cache_panel_*.pkl
+*.pkl
 
-# Logs
+# Execution logs
 *.log
 logs/*.log
 !logs/.gitkeep
 
-# System / IDE files
+# System & IDE configuration files
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
+*.swp

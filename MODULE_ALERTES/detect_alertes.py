@@ -59,6 +59,42 @@ except ImportError:
         return df
 
 
+def _diff_max_post_vs_dernier_pre(
+    sub_p: pd.DataFrame,
+    sub_post: pd.DataFrame,
+    r_dt,
+    col: str
+) -> float:
+    """
+    Calcule de façon sûre : max(valeurs post-événement) - dernière valeur connue avant/à r_dt.
+
+    Utilisé par les alertes de cohérence registre/satellite (#13, #14) qui comparent
+    un indice avant/après une opération terrain déclarée (irrigation, coupe, etc.).
+
+    Règle stricte : ne JAMAIS retourner 0.0 comme valeur par défaut quand la baseline
+    pré-événement ou les données post-événement sont absentes (0.0 est une valeur physique
+    valide pour des indices comme NDWI et créerait un faux écart / une fausse alerte ou
+    un faux silence). On retourne np.nan explicitement : le NaN se propage naturellement
+    dans les comparaisons (`np.nan < seuil` vaut toujours False), donc l'alerte concernée
+    ne se déclenche simplement pas, sans jamais planter et sans jamais inventer un signal.
+    """
+    if col not in sub_p.columns or sub_p.empty:
+        return np.nan
+
+    pre_vals = sub_p[sub_p["date"] <= r_dt][col].dropna()
+    if pre_vals.empty:
+        return np.nan
+
+    if sub_post is None or sub_post.empty or col not in sub_post.columns:
+        return np.nan
+
+    post_vals = sub_post[col].dropna()
+    if post_vals.empty:
+        return np.nan
+
+    return float(post_vals.max() - pre_vals.iloc[-1])
+
+
 def detecter_toutes_les_alertes(
     df_panel: pd.DataFrame,
     df_pixels_s2: pd.DataFrame = None,
@@ -655,38 +691,54 @@ def detecter_toutes_les_alertes(
             # Alerte 13 : Irrigation déclarée sans réponse hydrique
             if "IRRIGATION" in r_type:
                 sub_post = sub_p[(sub_p["date"] >= r_dt) & (sub_p["date"] <= r_dt + pd.Timedelta(days=5))]
-                if not sub_post.empty:
-                    max_ndwi_diff = sub_post["NDWI"].max() - sub_p[sub_p["date"] <= r_dt]["NDWI"].tail(1).values[0] if "NDWI" in sub_p.columns else 0.0
-                    if max_ndwi_diff < 0.05:
-                        conf = cfg_alt.calculer_score_confiance_alerte(n_familles=2, facteur_echelle=1.0)
-                        alertes_cat_c.append({
-                            "site": r_site, "parcel_id": r_pid, "date": r_dt, "culture": r_culture,
-                            "type_alerte": "ALERTE_13_IRRIGATION_SANS_REPONSE_HYDRIQUE",
-                            "nom_alerte": cfg_alt.REGISTRE_ALERTES["ALERTE_13_IRRIGATION_SANS_REPONSE_HYDRIQUE"]["nom"],
-                            "categorie": "C_COHERENCE_REGISTRE", "gravite": "CRITIQUE",
-                            "score_confiance": conf["score_confiance"],
-                            "niveau_confiance": conf["niveau_confiance"],
-                            "familles_impliquees": 2, "statut": "DECLENCHEE",
-                            "details": f"Irrigation déclarée le {r_dt.strftime('%Y-%m-%d')} sans hausse NDWI (< 5%)"
-                        })
+                max_ndwi_diff = _diff_max_post_vs_dernier_pre(sub_p, sub_post, r_dt, "NDWI")
+
+                if not np.isnan(max_ndwi_diff) and max_ndwi_diff < 0.05:
+                    conf = cfg_alt.calculer_score_confiance_alerte(n_familles=2, facteur_echelle=1.0)
+                    alertes_cat_c.append({
+                        "site": r_site, "parcel_id": r_pid, "date": r_dt, "culture": r_culture,
+                        "type_alerte": "ALERTE_13_IRRIGATION_SANS_REPONSE_HYDRIQUE",
+                        "nom_alerte": cfg_alt.REGISTRE_ALERTES["ALERTE_13_IRRIGATION_SANS_REPONSE_HYDRIQUE"]["nom"],
+                        "categorie": "C_COHERENCE_REGISTRE", "gravite": "CRITIQUE",
+                        "score_confiance": conf["score_confiance"],
+                        "niveau_confiance": conf["niveau_confiance"],
+                        "familles_impliquees": 2, "statut": "DECLENCHEE",
+                        "details": f"Irrigation déclarée le {r_dt.strftime('%Y-%m-%d')} sans hausse NDWI (< 5%)"
+                    })
 
             # Alerte 14 : Coupe PAM déclarée sans ΔNDVI caractéristique
+            #
+            # NOTE : c'est ICI que le pipeline plantait réellement (IndexError sur
+            # .tail(1).values[0]) lors de la dernière exécution. La correction appliquée
+            # précédemment n'avait couvert que l'Alerte 13 (bloc juste au-dessus) ; ce
+            # bloc utilisait encore exactement le même schéma non protégé.
             if any(k in r_type for k in ["COUPE", "TAILLE", "RECOLTE"]):
                 sub_post = sub_p[(sub_p["date"] >= r_dt) & (sub_p["date"] <= r_dt + pd.Timedelta(days=5))]
-                if not sub_post.empty:
-                    min_ndvi_diff = sub_post["NDVI"].min() - sub_p[sub_p["date"] <= r_dt]["NDVI"].tail(1).values[0] if "NDVI" in sub_p.columns else 0.0
-                    if min_ndvi_diff > -0.10:
-                        conf = cfg_alt.calculer_score_confiance_alerte(n_familles=1, facteur_echelle=1.0)
-                        alertes_cat_c.append({
-                            "site": r_site, "parcel_id": r_pid, "date": r_dt, "culture": r_culture,
-                            "type_alerte": "ALERTE_14_COUPE_PAM_SANS_SAUT_NDVI",
-                            "nom_alerte": cfg_alt.REGISTRE_ALERTES["ALERTE_14_COUPE_PAM_SANS_SAUT_NDVI"]["nom"],
-                            "categorie": "C_COHERENCE_REGISTRE", "gravite": "AVERTISSEMENT",
-                            "score_confiance": conf["score_confiance"],
-                            "niveau_confiance": conf["niveau_confiance"],
-                            "familles_impliquees": 1, "statut": "DECLENCHEE",
-                            "details": f"Opération {r_type} le {r_dt.strftime('%Y-%m-%d')} sans chute ΔNDVI ≤ -0.10"
-                        })
+                # On veut ici la BAISSE (min post - dernier pre) et non la hausse max
+                # utilisée par le helper générique (Alerte 13) : calcul dédié, mais avec
+                # la même garde anti-crash / anti-donnée-fantôme (jamais de 0.0 par défaut).
+                if "NDVI" in sub_p.columns and not sub_post.empty:
+                    pre_ndvi_vals = sub_p[sub_p["date"] <= r_dt]["NDVI"].dropna()
+                    post_ndvi_vals = sub_post["NDVI"].dropna()
+                    if not pre_ndvi_vals.empty and not post_ndvi_vals.empty:
+                        min_ndvi_diff = float(post_ndvi_vals.min() - pre_ndvi_vals.iloc[-1])
+                    else:
+                        min_ndvi_diff = np.nan
+                else:
+                    min_ndvi_diff = np.nan
+
+                if not np.isnan(min_ndvi_diff) and min_ndvi_diff > -0.10:
+                    conf = cfg_alt.calculer_score_confiance_alerte(n_familles=1, facteur_echelle=1.0)
+                    alertes_cat_c.append({
+                        "site": r_site, "parcel_id": r_pid, "date": r_dt, "culture": r_culture,
+                        "type_alerte": "ALERTE_14_COUPE_PAM_SANS_SAUT_NDVI",
+                        "nom_alerte": cfg_alt.REGISTRE_ALERTES["ALERTE_14_COUPE_PAM_SANS_SAUT_NDVI"]["nom"],
+                        "categorie": "C_COHERENCE_REGISTRE", "gravite": "AVERTISSEMENT",
+                        "score_confiance": conf["score_confiance"],
+                        "niveau_confiance": conf["niveau_confiance"],
+                        "familles_impliquees": 1, "statut": "DECLENCHEE",
+                        "details": f"Opération {r_type} le {r_dt.strftime('%Y-%m-%d')} sans chute ΔNDVI ≤ -0.10"
+                    })
 
     # Conversion en DataFrames
     cols_out = [

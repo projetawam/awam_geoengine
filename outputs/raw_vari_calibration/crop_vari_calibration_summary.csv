@@ -1,12 +1,12 @@
 parcel_id,culture_declaree_parcelle,signal_partage,member_species,s2_raw_vari_mean,s2_unmixed_vari_mean,ground_truth_target_vari,calibration_offset,s2_calibrated_vari_mean,calibrated_rmse,calibrated
-makthar_P1,Amandier,False,Amandier,-0.1807,0.2701,,0.0,0.2701,,False
-makthar_P2,Olivier,False,Olivier,-0.1528,0.4979,,0.0,0.4979,,False
-makthar_P3,Sol nu,False,N/A,-0.1491,0.5352,,0.0,0.5352,,False
-makthar_P4,Sol nu,False,N/A,-0.1583,0.4223,,0.0,0.4223,,False
-makthar_P5,Sol nu,False,N/A,-0.1524,0.6045,,0.0,0.6045,,False
-makthar_P6,Sol nu,False,N/A,-0.1726,0.4604,,0.0,0.4604,,False
-sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,True,Olivier/Citronnelle/Verveine,-0.1316,-0.2495,0.0563,0.3058,0.0379,0.0184,True
-sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,True,Lavande/Romarin/Geranium,-0.2099,-0.3614,0.006,0.3674,0.0041,0.0019,True
-sidi_mechreg_Parcelle_Kemel_2,Aucune,False,N/A,-0.204,-0.3731,,0.0,-0.3731,,False
-sidi_mechreg_Parcelle_Kemel_3,Caroubier,False,Caroubier,-0.2273,-0.4807,-0.0047,0.476,-0.0071,0.0024,True
-sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,True,Lavande/Romarin/Geranium/Sauge,-0.2014,-0.2319,0.006,0.2379,0.0048,0.0012,True
+makthar_P1,Amandier,False,Amandier,-0.1299,0.8853,,0.0,0.8853,,False
+makthar_P2,Olivier,False,Olivier,-0.2034,0.2156,,0.0,0.2156,,False
+makthar_P3,Sol nu,False,N/A,-0.1315,0.816,,0.0,0.816,,False
+makthar_P4,Sol nu,False,N/A,-0.2017,0.2399,,0.0,0.2399,,False
+makthar_P5,Sol nu,False,N/A,-0.1878,0.5222,,0.0,0.5222,,False
+makthar_P6,Sol nu,False,N/A,-0.2105,0.0731,,0.0,0.0731,,False
+sidi_mechreg_Parcelle_Badreddine_5,Olivier/Citronnelle/Verveine,True,Olivier/Citronnelle/Verveine,-0.2137,-0.0547,0.0563,0.111,0.0538,0.0025,True
+sidi_mechreg_Parcelle_Kemel_1,Lavande/Romarin/Geranium,True,Lavande/Romarin/Geranium,-0.2946,-0.8082,0.006,0.8142,0.0047,0.0013,True
+sidi_mechreg_Parcelle_Kemel_2,Aucune,False,N/A,-0.3008,-0.8407,,0.0,-0.8407,,False
+sidi_mechreg_Parcelle_Kemel_3,Caroubier,False,Caroubier,-0.2968,-0.8383,-0.0047,0.8336,-0.005,0.0003,True
+sidi_mechreg_Parcelle_Yahia_4,Lavande/Romarin/Geranium/Sauge,True,Lavande/Romarin/Geranium/Sauge,-0.2698,-0.6456,0.006,0.6516,0.0052,0.0008,True
