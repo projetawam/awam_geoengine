@@ -7,11 +7,15 @@ Gestionnaire unifié de journalisation (logging) pour GeoAI AWAM.
 
 Fournit des loggers professionnels configurés pour :
 1. La sortie console (stdout) propre.
-2. La persistance structurée dans scripts/logs/pipeline_master.log.
+2. La persistance structurée dans scripts/logs/pipeline_master.log
+   avec ROTATION automatique (10 Mo max, 5 fichiers de backup).
+   BUGFIX §27.6.B.2 : l'ancien FileHandler laissait le fichier croître
+   indéfiniment, saturant progressivement le disque serveur.
 """
 
 import sys
 import logging
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 try:
@@ -25,7 +29,7 @@ MASTER_LOG_FILE = LOGS_DIR / "pipeline_master.log"
 
 def get_logger(name: str = "AWAM.Master", level: int = logging.INFO) -> logging.Logger:
     """
-    Retourne un Logger configuré avec handlers Console et Fichier.
+    Retourne un Logger configuré avec handlers Console et Fichier rotatif.
     Évite les handlers en double si déjà configuré.
     """
     logger = logging.getLogger(name)
@@ -43,8 +47,14 @@ def get_logger(name: str = "AWAM.Master", level: int = logging.INFO) -> logging.
         c_handler.setFormatter(formatter)
         logger.addHandler(c_handler)
 
-        # 2. File Handler (UTF-8)
-        f_handler = logging.FileHandler(MASTER_LOG_FILE, encoding="utf-8")
+        # 2. BUGFIX §27.6.B.2 : RotatingFileHandler (max 10 Mo, 5 fichiers backup)
+        # L'ancien FileHandler laissait le log croître indéfiniment.
+        f_handler = RotatingFileHandler(
+            MASTER_LOG_FILE,
+            encoding="utf-8",
+            maxBytes=10 * 1024 * 1024,  # 10 Mo
+            backupCount=5
+        )
         f_handler.setLevel(level)
         f_handler.setFormatter(formatter)
         logger.addHandler(f_handler)

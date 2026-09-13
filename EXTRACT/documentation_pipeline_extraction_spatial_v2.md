@@ -13,12 +13,13 @@
 2. [Entrées & Parcelles Spatiales (Inputs)](#2-entrées--parcelles-spatiales-inputs)
 3. [Phase 1 : Extraction Google Earth Engine](#3-phase-1--extraction-google-earth-engine-gee_export_pixel_indices_databasepy)
 4. [Phase 2 : Extraction Directe NASA Earthdata](#4-phase-2--extraction-directe-nasa-earthdata-earthdata_export_pixel_indices_databasepy)
-5. [Phase 3 : Nettoyage & Validation Qualité](#5-phase-3--nettoyage--validation-qualité-clean_extracted_datapy)
-6. [Orchestrateur Principal](#6-orchestrateur-principal-run_all_extractionspy)
-7. [Dictionnaire des Données & Schémas Complétés](#7-dictionnaire-des-données--schémas-complétés)
-8. [Organisation des Répertoires & Sorties (Outputs)](#8-organisation-des-répertoires--sorties-outputs)
-9. [Guide de Démarrage & Commandes CLI](#9-guide-de-démarrage--commandes-cli)
-10. [Historique des Corrections & Limites Connues](#10-historique-des-corrections--limites-connues)
+5. [Phase 2bis : Extraction Topographique MNT (topography_extractor.py)](#5-phase-2bis--extraction-topographique-mnt-srtm-30m-copernicus-dem)
+6. [Phase 3 : Nettoyage & Validation Qualité](#6-phase-3--nettoyage--validation-qualité-clean_extracted_datapy)
+7. [Orchestrateur Principal](#7-orchestrateur-principal-run_all_extractionspy)
+8. [Dictionnaire des Données & Schémas Complétés](#8-dictionnaire-des-données--schémas-complétés)
+9. [Organisation des Répertoires & Sorties (Outputs)](#9-organisation-des-répertoires--sorties-outputs)
+10. [Guide de Démarrage & Commandes CLI](#10-guide-de-démarrage--commandes-cli)
+11. [Historique des Corrections & Limites Connues](#11-historique-des-corrections--limites-connues)
 
 ---
 
@@ -269,7 +270,38 @@ Un fichier GeoParquet par site et par produit :
 
 ---
 
-## 5. Phase 3 : Nettoyage & Validation Qualité (`clean_extracted_data.py`)
+## 5. Phase 2bis : Extraction Topographique MNT (`topography_extractor.py`)
+
+Ce module assure l'intégration du relief haute résolution ($30\text{ m}$) pour l'ensemble des parcelles d'AWAM GeoEngine, conformément aux exigences biophysiques du **§27.7.6 de la Phase 2**.
+
+### 5.1 Stratégie d'Extraction Unique & Idempotence
+La topographie étant une propriété physique permanente du relief :
+- **Extraction unique mise en cache** : lors du premier run, le script échantillonne le centroïde et les 4 points cardinaux des polygones parcellaires via l'API Open-Meteo Elevation / Copernicus DEM $30\text{ m}$ (ou SRTM $30\text{ m}$).
+- **Lecture instantanée en production** : lors des exécutions ultérieures, le pipeline lit directement le cache local GeoParquet en quelques millisecondes sans appel réseau.
+
+### 5.2 Variables Topographiques Calculées
+| Variable | Unité / Type | Description Biophysique |
+| :--- | :---: | :--- |
+| `elevation_m` | Mètres ($m$) | Altitude moyenne réelle de la parcelle |
+| `elevation_min_m`, `elevation_max_m` | Mètres ($m$) | Altitudes extrêmes au sein du polygone |
+| `delta_elevation_m` | Mètres ($m$) | Dénivelé intra-parcellaire |
+| `slope_deg`, `slope_pct` | Degrés ($^\circ$) / Pourcentage ($\%$) | Pente moyenne du terrain |
+| `aspect_deg`, `aspect_cardinal` | $0\text{--}360^\circ$ / N, NE, E, SE, S, SW, W, NW | Orientation de la plus grande pente |
+| `exposition_type` | `ADRET`, `UBAC`, `TRANSITION` | Classification de l'ensoleillement et de l'exposition radiative |
+| `twi_proxy` | Indice sans dimension ($\ln(a/\tan b)$) | Topographic Wetness Index (potentiel d'accumulation d'eau) |
+| `position_relief` | Catégorie | `PLATEAU`, `VERSANT_DOUX`, `VERSANT_MODERE`, `FORTE_PENTE`, `BAS_FOND_PLAT` |
+| `correction_thermique_lapse_rate_c` | $^{\circ}\text{C}$ | Correction adiabatique $\Delta T = -0.0065 \times (z_{\text{parcelle}} - z_{\text{ERA5_maille}})$ |
+
+### 5.3 Sorties Standardisées GeoParquet (OGC EPSG:4326)
+- `outputs/topography/AWAM_DEM_ALL_ALL_SRTM-Topography_20250501_20260828_v2_clean.parquet` *(GeoParquet consolidé)*
+- `outputs/topography/AWAM_DEM_ALL_ALL_SRTM-Topography_20250501_20260828_v2_clean.csv` *(Export CSV)*
+- `outputs/topography/AWAM_DEM_makthar_ALL_SRTM-Topography_20250501_20260828_v2_clean.parquet`
+- `outputs/topography/AWAM_DEM_sidi-mechreg_ALL_SRTM-Topography_20250501_20260828_v2_clean.parquet`
+- `outputs/pixel_indices_database/clean/AWAM_DEM_ALL_ALL_SRTM-Topography_20250501_20260828_v2_clean.parquet`
+
+---
+
+## 6. Phase 3 : Nettoyage & Validation Qualité (`clean_extracted_data.py`)
 
 Le script scanne `outputs/pixel_indices_database/raw/`, détecte le type de capteur depuis le nom de fichier (`detect_datatype`), applique une fonction de nettoyage dédiée par type, puis exporte vers `outputs/pixel_indices_database/clean/` et génère `cleaning_report.md`.
 

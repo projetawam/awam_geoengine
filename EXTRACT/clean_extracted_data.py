@@ -526,19 +526,28 @@ def run_cleaning_pipeline(append_mode=False):
 
     print(f"  Found {len(raw_files)} raw file(s) in {RAW_DIR.name}/\n", flush=True)
 
-    report_rows = []
-
+    from collections import defaultdict
+    grouped_raw = defaultdict(list)
     for fpath in raw_files:
         datatype = detect_datatype(fpath)
-        clean_fn = CLEANING_FUNCTIONS.get(datatype)
-
-        # Parse provider and site from raw filename
         parts = fpath.stem.split("_")
         provider = parts[1] if len(parts) > 1 else "GEE"
         site = parts[2] if len(parts) > 2 else "all"
+        grouped_raw[(provider, site, datatype)].append(fpath)
 
-        print(f"  Processing {fpath.name} ({datatype})…", flush=True)
-        gdf = gpd.read_parquet(fpath)
+    print(f"  Organized into {len(grouped_raw)} sensor/site dataset group(s).\n", flush=True)
+
+    report_rows = []
+
+    for (provider, site, datatype), fpaths in sorted(grouped_raw.items()):
+        clean_fn = CLEANING_FUNCTIONS.get(datatype)
+
+        print(f"  Processing [{provider} / {site} / {datatype}] ({len(fpaths)} raw chunk(s))…", flush=True)
+        for fp in fpaths:
+            print(f"    ↳ {fp.name}", flush=True)
+
+        gdfs = [gpd.read_parquet(fp) for fp in fpaths]
+        gdf = pd.concat(gdfs, ignore_index=True)
         n_raw = len(gdf)
 
         if clean_fn:
@@ -575,7 +584,7 @@ def run_cleaning_pipeline(append_mode=False):
             d_max_str = pd.to_datetime(gdf_clean["date"]).max().strftime("%Y%m%d")
             clean_filename = f"AWAM_{provider}_{site}_ALL_{datatype}_{d_min_str}_{d_max_str}_v2_clean.parquet"
         else:
-            clean_filename = fpath.stem + "_clean.parquet"
+            clean_filename = fpaths[0].stem + "_clean.parquet"
 
         clean_filepath = CLEAN_DIR / clean_filename
 
@@ -591,7 +600,20 @@ def run_cleaning_pipeline(append_mode=False):
         n_dropped = n_raw - n_clean
         pct_retained = (n_clean / n_raw * 100.0) if n_raw > 0 else 100.0
 
-        gdf_clean.to_parquet(clean_filepath, index=False)
+        # BUGFIX §27.1.13 : Écriture ATOMIQUE des fichiers Parquet.
+        # L'ancienne écriture directe (gdf_clean.to_parquet(clean_filepath)) laissait
+        # un fichier corrompu si le processus était tué (SIGKILL, OOM) en cours d'écriture.
+        # La séquence write-to-tmp + os.replace() est atomique sur NTFS et POSIX :
+        # en cas de crash, seul le .tmp est perdu ; le fichier officiel reste intact.
+        tmp_filepath = clean_filepath.with_suffix(".tmp.parquet")
+        try:
+            gdf_clean.to_parquet(tmp_filepath, index=False)
+            import os as _os
+            _os.replace(tmp_filepath, clean_filepath)  # atomique NTFS + POSIX
+        except Exception:
+            if tmp_filepath.exists():
+                tmp_filepath.unlink(missing_ok=True)
+            raise
 
         print(f"    ↳ QC filter dropped     : {stats.get('qc_drop', 0):,} rows", flush=True)
         print(f"    ↳ Outliers dropped      : {stats.get('outlier_drop', 0):,} rows", flush=True)
@@ -599,9 +621,8 @@ def run_cleaning_pipeline(append_mode=False):
         print(f"    ↳ Conflicting rows merged (averaged, not lost): {stats.get('merged', 0):,}", flush=True)
         print(f"    ✓ {n_raw:,} raw → {n_clean:,} clean ({pct_retained:.1f}% retained) → {clean_filename}\n", flush=True)
 
-
         report_rows.append({
-            "Filename":        fpath.name,
+            "Filename":        ", ".join(f.name for f in fpaths),
             "Datatype":        datatype,
             "Raw Rows":        n_raw,
             "Clean Rows":      n_clean,

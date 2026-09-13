@@ -136,7 +136,13 @@ def run_subscript(script_path: Path, label: str, extra_args: list) -> bool:
             for line in process.stdout:
                 sys.stdout.write(line)
                 sys.stdout.flush()
-        process.wait()
+
+        try:
+            process.wait(timeout=900)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            print(f"\n  [TIMEOUT] {script_path.name} — tué après 900s.", flush=True)
+            return False
         elapsed = time.perf_counter() - t0
         ok = process.returncode == 0
         print(f"\n  {'OK' if ok else 'ECHEC'} -- {label} en {elapsed:.1f}s (code {process.returncode})", flush=True)

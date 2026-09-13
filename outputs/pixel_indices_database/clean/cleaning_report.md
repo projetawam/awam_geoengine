@@ -1,5 +1,5 @@
 # Data Cleaning & Validation Report (v2)
-*Generated on: 2026-09-01 13:16:00*
+*Generated on: 2026-09-13 13:27:57*
 
 ## Summary
 
@@ -15,49 +15,29 @@ averaged into a single row rather than one of them being silently discarded.
 
 | Filename | Datatype | Raw Rows | Clean Rows | Dropped | QC Drop | Outlier Drop | Dedup Drop | Merged (conflict) | Retained |
 |----------|----------|---------:|-----------:|--------:|--------:|-------------:|-----------:|------------------:|---------:|
-| `AWAM_Earthdata_makthar_ALL_ECOSTRESS-LST_20250501_20260811_v2.parquet` | ECOSTRESS-LST | 2,479 | 2,423 | 56 | 0 | 0 | 0 | 56 | 97.7% |
-| `AWAM_Earthdata_makthar_ALL_ECOSTRESS-LST_20260722_20260901_v2.parquet` | ECOSTRESS-LST | 98 | 98 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_makthar_ALL_ECOSTRESS-LST_20260730_20260901_v2.parquet` | ECOSTRESS-LST | 110 | 110 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_makthar_ALL_NISAR-Backscatter_20260617_20260811_v2.parquet` | NISAR-Backscatter | 4,370 | 2,972 | 1,398 | 0 | 0 | 1 | 1,397 | 68.0% |
-| `AWAM_Earthdata_makthar_ALL_NISAR-Backscatter_20260617_20260901_v2.parquet` | NISAR-Backscatter | 7,341 | 4,545 | 2,796 | 0 | 0 | 1 | 2,795 | 61.9% |
-| `AWAM_Earthdata_makthar_ALL_NISAR-SoilMoisture_20260617_20260811_v2.parquet` | NISAR-SoilMoisture | 60 | 60 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_makthar_ALL_NISAR-SoilMoisture_20260617_20260821_v2.parquet` | NISAR-SoilMoisture | 72 | 72 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_makthar_ALL_NISAR-SoilMoisture_20260617_20260901_v2.parquet` | NISAR-SoilMoisture | 90 | 90 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_ECOSTRESS-LST_20250501_20260811_v2.parquet` | ECOSTRESS-LST | 1,678 | 1,678 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_ECOSTRESS-LST_20260722_20260901_v2.parquet` | ECOSTRESS-LST | 153 | 153 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_ECOSTRESS-LST_20260730_20260901_v2.parquet` | ECOSTRESS-LST | 153 | 153 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-Backscatter_20260617_20260811_v2.parquet` | NISAR-Backscatter | 4,770 | 3,801 | 969 | 0 | 0 | 0 | 969 | 79.7% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-Backscatter_20260617_20260901_v2.parquet` | NISAR-Backscatter | 7,873 | 6,390 | 1,483 | 0 | 0 | 0 | 1,483 | 81.2% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-SoilMoisture_20260617_20260811_v2.parquet` | NISAR-SoilMoisture | 78 | 40 | 38 | 15 | 0 | 0 | 23 | 51.3% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-SoilMoisture_20260617_20260821_v2.parquet` | NISAR-SoilMoisture | 89 | 48 | 41 | 17 | 0 | 0 | 24 | 53.9% |
-| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-SoilMoisture_20260617_20260901_v2.parquet` | NISAR-SoilMoisture | 109 | 60 | 49 | 21 | 0 | 0 | 28 | 55.0% |
-| `AWAM_GEE_makthar_ALL_ERA5-Meteo_20250501_20260811_v2.parquet` | ERA5-Meteo | 2,760 | 2,760 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_makthar_ALL_ERA5-Meteo_20260730_20260901_v2.parquet` | ERA5-Meteo | 156 | 156 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_makthar_ALL_Landsat-Thermal_20250501_20260811_v2.parquet` | Landsat-Thermal | 6,168 | 6,163 | 5 | 0 | 0 | 0 | 5 | 99.9% |
-| `AWAM_GEE_makthar_ALL_Landsat-Thermal_20260730_20260901_v2.parquet` | Landsat-Thermal | 539 | 539 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_makthar_ALL_MODIS-LST_20250501_20260811_v2.parquet` | MODIS-LST | 1,877 | 1,877 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_makthar_ALL_MODIS-LST_20260730_20260901_v2.parquet` | MODIS-LST | 186 | 186 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_makthar_ALL_S1-SAR_20250501_20260811_v2.parquet` | S1-SAR | 173,327 | 171,597 | 1,730 | 0 | 1,730 | 0 | 0 | 99.0% |
-| `AWAM_GEE_makthar_ALL_S1-SAR_20260730_20260901_v2.parquet` | S1-SAR | 11,357 | 11,240 | 117 | 0 | 117 | 0 | 0 | 99.0% |
-| `AWAM_GEE_makthar_ALL_S2-Indices_20250501_20260811_v2.parquet` | S2-Indices | 63,391 | 55,578 | 7,813 | 0 | 0 | 0 | 7,813 | 87.7% |
-| `AWAM_GEE_makthar_ALL_S2-Indices_20260730_20260901_v2.parquet` | S2-Indices | 1,614 | 1,531 | 83 | 0 | 0 | 0 | 83 | 94.9% |
-| `AWAM_GEE_sidi-mechreg_ALL_ERA5-Meteo_20250501_20260811_v2.parquet` | ERA5-Meteo | 2,300 | 2,300 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_ERA5-Meteo_20260730_20260901_v2.parquet` | ERA5-Meteo | 130 | 130 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_Landsat-Thermal_20250501_20260811_v2.parquet` | Landsat-Thermal | 1,512 | 1,512 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_Landsat-Thermal_20260730_20260901_v2.parquet` | Landsat-Thermal | 165 | 165 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_MODIS-LST_20250501_20260811_v2.parquet` | MODIS-LST | 1,585 | 1,585 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_MODIS-LST_20260730_20260901_v2.parquet` | MODIS-LST | 141 | 141 | 0 | 0 | 0 | 0 | 0 | 100.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_S1-SAR_20250501_20260811_v2.parquet` | S1-SAR | 106,815 | 105,163 | 1,652 | 0 | 1,221 | 292 | 139 | 98.5% |
-| `AWAM_GEE_sidi-mechreg_ALL_S1-SAR_20260730_20260901_v2.parquet` | S1-SAR | 8,135 | 8,050 | 85 | 0 | 85 | 0 | 0 | 99.0% |
-| `AWAM_GEE_sidi-mechreg_ALL_S2-Indices_20250501_20260811_v2.parquet` | S2-Indices | 52,477 | 36,433 | 16,044 | 0 | 0 | 0 | 16,044 | 69.4% |
-| `AWAM_GEE_sidi-mechreg_ALL_S2-Indices_20260730_20260901_v2.parquet` | S2-Indices | 5,612 | 3,595 | 2,017 | 0 | 0 | 0 | 2,017 | 64.1% |
+| `AWAM_Earthdata_makthar_ALL_ECOSTRESS-LST_20250501_20260811_v2.parquet, AWAM_Earthdata_makthar_ALL_ECOSTRESS-LST_20260722_20260901_v2.parquet, AWAM_Earthdata_makthar_ALL_ECOSTRESS-LST_20260730_20260901_v2.parquet` | ECOSTRESS-LST | 2,687 | 2,533 | 154 | 0 | 0 | 98 | 56 | 94.3% |
+| `AWAM_Earthdata_makthar_ALL_NISAR-Backscatter_20260617_20260811_v2.parquet, AWAM_Earthdata_makthar_ALL_NISAR-Backscatter_20260617_20260901_v2.parquet` | NISAR-Backscatter | 11,711 | 4,545 | 7,166 | 0 | 0 | 4,371 | 2,795 | 38.8% |
+| `AWAM_Earthdata_makthar_ALL_NISAR-SoilMoisture_20260617_20260811_v2.parquet, AWAM_Earthdata_makthar_ALL_NISAR-SoilMoisture_20260617_20260821_v2.parquet, AWAM_Earthdata_makthar_ALL_NISAR-SoilMoisture_20260617_20260901_v2.parquet` | NISAR-SoilMoisture | 222 | 90 | 132 | 0 | 0 | 132 | 0 | 40.5% |
+| `AWAM_Earthdata_sidi-mechreg_ALL_ECOSTRESS-LST_20250501_20260811_v2.parquet, AWAM_Earthdata_sidi-mechreg_ALL_ECOSTRESS-LST_20260722_20260901_v2.parquet, AWAM_Earthdata_sidi-mechreg_ALL_ECOSTRESS-LST_20260730_20260901_v2.parquet` | ECOSTRESS-LST | 1,984 | 1,882 | 102 | 0 | 0 | 102 | 0 | 94.9% |
+| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-Backscatter_20260617_20260811_v2.parquet, AWAM_Earthdata_sidi-mechreg_ALL_NISAR-Backscatter_20260617_20260901_v2.parquet` | NISAR-Backscatter | 12,643 | 6,502 | 6,141 | 0 | 0 | 4,624 | 1,517 | 51.4% |
+| `AWAM_Earthdata_sidi-mechreg_ALL_NISAR-SoilMoisture_20260617_20260811_v2.parquet, AWAM_Earthdata_sidi-mechreg_ALL_NISAR-SoilMoisture_20260617_20260821_v2.parquet, AWAM_Earthdata_sidi-mechreg_ALL_NISAR-SoilMoisture_20260617_20260901_v2.parquet` | NISAR-SoilMoisture | 276 | 60 | 216 | 53 | 0 | 134 | 29 | 21.7% |
+| `AWAM_GEE_makthar_ALL_ERA5-Meteo_20250501_20260811_v2.parquet, AWAM_GEE_makthar_ALL_ERA5-Meteo_20260730_20260901_v2.parquet` | ERA5-Meteo | 2,916 | 2,886 | 30 | 0 | 0 | 0 | 30 | 99.0% |
+| `AWAM_GEE_makthar_ALL_Landsat-Thermal_20250501_20260811_v2.parquet, AWAM_GEE_makthar_ALL_Landsat-Thermal_20260730_20260901_v2.parquet` | Landsat-Thermal | 6,707 | 6,625 | 82 | 0 | 0 | 77 | 5 | 98.8% |
+| `AWAM_GEE_makthar_ALL_MODIS-LST_20250501_20260811_v2.parquet, AWAM_GEE_makthar_ALL_MODIS-LST_20260730_20260901_v2.parquet` | MODIS-LST | 2,063 | 2,053 | 10 | 0 | 0 | 0 | 10 | 99.5% |
+| `AWAM_GEE_makthar_ALL_S1-SAR_20250501_20260811_v2.parquet, AWAM_GEE_makthar_ALL_S1-SAR_20260730_20260901_v2.parquet` | S1-SAR | 184,684 | 178,601 | 6,083 | 0 | 1,845 | 4,238 | 0 | 96.7% |
+| `AWAM_GEE_makthar_ALL_S2-Indices_20250501_20260811_v2.parquet, AWAM_GEE_makthar_ALL_S2-Indices_20260730_20260901_v2.parquet` | S2-Indices | 65,005 | 56,812 | 8,193 | 0 | 0 | 293 | 7,900 | 87.4% |
+| `AWAM_GEE_sidi-mechreg_ALL_ERA5-Meteo_20250501_20260811_v2.parquet, AWAM_GEE_sidi-mechreg_ALL_ERA5-Meteo_20260730_20260901_v2.parquet` | ERA5-Meteo | 2,430 | 2,405 | 25 | 0 | 0 | 0 | 25 | 99.0% |
+| `AWAM_GEE_sidi-mechreg_ALL_Landsat-Thermal_20250501_20260811_v2.parquet, AWAM_GEE_sidi-mechreg_ALL_Landsat-Thermal_20260730_20260901_v2.parquet` | Landsat-Thermal | 1,677 | 1,635 | 42 | 0 | 0 | 42 | 0 | 97.5% |
+| `AWAM_GEE_sidi-mechreg_ALL_MODIS-LST_20250501_20260811_v2.parquet, AWAM_GEE_sidi-mechreg_ALL_MODIS-LST_20260730_20260901_v2.parquet` | MODIS-LST | 1,726 | 1,724 | 2 | 0 | 0 | 0 | 2 | 99.9% |
+| `AWAM_GEE_sidi-mechreg_ALL_S1-SAR_20250501_20260811_v2.parquet, AWAM_GEE_sidi-mechreg_ALL_S1-SAR_20260730_20260901_v2.parquet` | S1-SAR | 114,950 | 110,744 | 4,206 | 0 | 1,295 | 2,472 | 439 | 96.3% |
+| `AWAM_GEE_sidi-mechreg_ALL_S2-Indices_20250501_20260811_v2.parquet, AWAM_GEE_sidi-mechreg_ALL_S2-Indices_20260730_20260901_v2.parquet` | S2-Indices | 58,089 | 39,147 | 18,942 | 0 | 0 | 1,364 | 17,578 | 67.4% |
 
 ### Overall Metrics
 
 - **Total Raw Records Extracted:** 469,770
-- **Total Clean Records Preserved:** 433,394
-- **Total Records Filtered:** 36,376
-- **Overall Data Retention Rate:** 92.26%
+- **Total Clean Records Preserved:** 418,244
+- **Total Records Filtered:** 51,526
+- **Overall Data Retention Rate:** 89.03%
 
 ---
 

@@ -194,8 +194,16 @@ FENETRE_PRECIP_JOURS = 5
 SEUIL_AMBIANT_HUMIDE_MM = 15
 FENETRE_AMBIANTE_JOURS = 30
 
-DATE_DEBUT = "2025-05-01"
-DATE_FIN = "2026-08-12"
+DATE_DEBUT = "2025-05-01"  # Date de début de la saison de référence (configurable)
+# BUGFIX §27.1.5 : DATE_FIN était codée en dur ("2026-08-12"), figeant le pipeline
+# et l'empêchant d'intégrer les nouvelles scènes satellites arrivant après cette date.
+# Remplacement par la date UTC du jour, mise à jour à chaque exécution.
+# BUGFIX warning Python 3.12+ : utcnow() est déprécié → datetime.now(timezone.utc)
+try:
+    from datetime import datetime as _dt, timezone as _tz
+    DATE_FIN = _dt.now(_tz.utc).strftime("%Y-%m-%d")
+except Exception:
+    DATE_FIN = "2026-08-12"  # fallback de sécurité uniquement
 
 # Événements connus utilisés pour l'auto-validation (Planning WWC).
 # Chargés dynamiquement depuis le registre central PIPELINE_MASTER/registre_evenements_terrain.csv

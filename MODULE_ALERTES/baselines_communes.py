@@ -120,10 +120,28 @@ def fusionner_tous_les_capteurs_sur_grille_pixel_10m(dict_sources: dict) -> pd.D
                 df_s2 = pd.merge(df_s2, df_all_src, on=["parcel_id", "date", "longitude", "latitude"], how="left")
 
     # 3. Harmonisation thermique multi-capteurs (LST ECOSTRESS / Landsat / MODIS)
-    if "LST_Landsat_C" in df_s2.columns and "LST_ECOSTRESS_C" in df_s2.columns:
-        df_s2["LST_ECOSTRESS_C"] = df_s2["LST_ECOSTRESS_C"].fillna(df_s2["LST_Landsat_C"])
-    if "LST_K" in df_s2.columns and "LST_ECOSTRESS_C" in df_s2.columns:
-        df_s2["LST_ECOSTRESS_C"] = df_s2["LST_ECOSTRESS_C"].fillna(df_s2["LST_K"] - 273.15)
+    # BUGFIX §27.3.2 : L'ancien code écrasait LST_ECOSTRESS_C avec les valeurs Landsat
+    # puis MODIS sans aucune trace de la provenance, détruisant la traçabilité
+    # de résolution spatiale (ECOSTRESS 70m vs Landsat 30m vs MODIS 1000m).
+    # Solution : création d'une colonne composite explicite + colonne d'attribution.
+    if "LST_ECOSTRESS_C" in df_s2.columns:
+        df_s2["LST_composite_C"] = df_s2["LST_ECOSTRESS_C"].copy()
+        df_s2["LST_source"] = "ECOSTRESS"
+        if "LST_Landsat_C" in df_s2.columns:
+            mask_eco_nan = df_s2["LST_composite_C"].isna()
+            df_s2.loc[mask_eco_nan, "LST_composite_C"] = df_s2.loc[mask_eco_nan, "LST_Landsat_C"]
+            df_s2.loc[mask_eco_nan & df_s2["LST_Landsat_C"].notna(), "LST_source"] = "Landsat"
+        if "LST_K" in df_s2.columns:
+            mask_still_nan = df_s2["LST_composite_C"].isna()
+            df_s2.loc[mask_still_nan, "LST_composite_C"] = df_s2.loc[mask_still_nan, "LST_K"] - 273.15
+            df_s2.loc[mask_still_nan & df_s2["LST_K"].notna(), "LST_source"] = "MODIS"
+    elif "LST_Landsat_C" in df_s2.columns:
+        df_s2["LST_composite_C"] = df_s2["LST_Landsat_C"].copy()
+        df_s2["LST_source"] = "Landsat"
+        if "LST_K" in df_s2.columns:
+            mask_still_nan = df_s2["LST_composite_C"].isna()
+            df_s2.loc[mask_still_nan, "LST_composite_C"] = df_s2.loc[mask_still_nan, "LST_K"] - 273.15
+            df_s2.loc[mask_still_nan & df_s2["LST_K"].notna(), "LST_source"] = "MODIS"
 
     # 4. Interpolation Spatio-Temporelle Causale par pixel 10m
     non_s2_cols = [
@@ -134,8 +152,12 @@ def fusionner_tous_les_capteurs_sur_grille_pixel_10m(dict_sources: dict) -> pd.D
     if non_s2_cols:
         df_s2 = df_s2.sort_values(["parcel_id", "longitude", "latitude", "date"])
         for col in non_s2_cols:
+            # BUGFIX §27.3.1 : suppression du bfill(limit=45) non-causal.
+            # Le bfill propagait des observations FUTURES jusqu'à 45 jours en
+            # arrière, violant l'engagement de causalité temporelle du module.
+            # Seul le ffill (forward-fill) est conservé : il ne propage que
+            # vers le futur (à partir d'une observation passée connue).
             df_s2[col] = df_s2.groupby(["parcel_id", "longitude", "latitude"])[col].ffill(limit=45)
-            df_s2[col] = df_s2.groupby(["parcel_id", "longitude", "latitude"])[col].bfill(limit=45)
 
     return df_s2
 

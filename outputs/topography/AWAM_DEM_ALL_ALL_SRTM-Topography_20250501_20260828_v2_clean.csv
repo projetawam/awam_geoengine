@@ -1,0 +1,12 @@
+site,parcel_id,date,culture,area_h,centroid_lat,centroid_lon,elevation_m,elevation_min_m,elevation_max_m,delta_elevation_m,slope_deg,slope_pct,aspect_deg,aspect_cardinal,exposition_type,twi_proxy,position_relief,altitude_era5_maille_m,delta_altitude_era5_m,correction_thermique_lapse_rate_c,lapse_rate_deg_c_per_km
+makthar,makthar_P1,2026-08-28,Amandier,0.965,35.634779,9.330839,624.0,624.0,626.0,2.0,2.13,3.73,63.4,NE,UBAC,7.89,VERSANT_DOUX,650.0,-26.0,0.17,-6.5
+makthar,makthar_P2,2026-08-28,Olivier,1.42,35.632975,9.333332,617.0,617.0,618.0,1.0,0.95,1.67,90.0,E,TRANSITION,8.7,BAS_FOND_PLAT,650.0,-33.0,0.21,-6.5
+makthar,makthar_P3,2026-08-28,Sol nu,0.735,35.635011,9.331243,625.0,624.0,625.0,1.0,0.95,1.67,0.0,N,UBAC,8.7,BAS_FOND_PLAT,650.0,-25.0,0.16,-6.5
+makthar,makthar_P4,2026-08-28,Sol nu,1.436,35.633182,9.333792,617.0,617.0,620.0,3.0,2.86,5.0,0.0,N,UBAC,7.6,VERSANT_DOUX,650.0,-33.0,0.21,-6.5
+makthar,makthar_P5,2026-08-28,Sol nu,1.628,35.63165,9.335216,611.0,611.0,617.0,6.0,5.79,10.14,9.5,N,UBAC,6.89,VERSANT_DOUX,650.0,-39.0,0.25,-6.5
+makthar,makthar_P6,2026-08-28,Sol nu,0.924,35.630589,9.337004,613.0,613.0,614.0,1.0,0.95,1.67,0.0,N,UBAC,8.7,BAS_FOND_PLAT,650.0,-37.0,0.24,-6.5
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_1,2026-08-28,Lavande/Romarin/Geranium,0.8433469501257874,37.178832,9.165212,101.0,101.0,102.0,1.0,0.95,1.67,90.0,E,TRANSITION,8.7,BAS_FOND_PLAT,20.0,81.0,-0.53,-6.5
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_2,2026-08-28,Aucune,0.6528,37.17818,9.164864,103.0,102.0,104.0,2.0,1.35,2.36,225.0,SW,ADRET,8.35,BAS_FOND_PLAT,20.0,83.0,-0.54,-6.5
+sidi_mechreg,sidi_mechreg_Parcelle_Kemel_3,2026-08-28,Caroubier,0.1651,37.178283,9.166587,104.0,103.0,105.0,2.0,1.35,2.36,225.0,SW,ADRET,8.35,BAS_FOND_PLAT,20.0,84.0,-0.55,-6.5
+sidi_mechreg,sidi_mechreg_Parcelle_Yahia_4,2026-08-28,Lavande/Romarin/Geranium/Sauge,0.5886291328117251,37.175283,9.163247,100.0,100.0,101.0,1.0,0.95,1.67,270.0,W,TRANSITION,8.7,BAS_FOND_PLAT,20.0,80.0,-0.52,-6.5
+sidi_mechreg,sidi_mechreg_Parcelle_Badreddine_5,2026-08-28,Olivier/Citronnelle/Verveine,2.11369414906725,37.126645,9.106345,103.0,96.0,103.0,7.0,6.92,12.13,164.1,S,ADRET,6.71,VERSANT_DOUX,20.0,83.0,-0.54,-6.5

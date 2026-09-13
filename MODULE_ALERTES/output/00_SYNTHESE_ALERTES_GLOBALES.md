@@ -6,10 +6,10 @@
 
 ## 1. Métriques Clés
 
-- **Nombre Total d'Alertes Déclenchées / Évaluées** : 818
-- **Alertes Confiance Haute (score ≥ 70%)** : 1
-- **Cas INDETERMINE (données manquantes, ex: precip_mm)** : 462
-- **Chaînes causales complexes identifiées** : 75
+- **Nombre Total d'Alertes Déclenchées / Évaluées** : 3135
+- **Alertes Confiance Haute (score ≥ 70%)** : 368
+- **Cas INDETERMINE (données manquantes, ex: precip_mm)** : 231
+- **Chaînes causales complexes identifiées** : 318
 
 ---
 
@@ -17,10 +17,10 @@
 
 | Catégorie | Fichier CSV | Nombre d'Alertes |
 |---|---|---:|
-| **Catégorie A : Risques Naturels** | `1_alertes_risques_naturels.csv` | 528 |
-| **Catégorie B : Comparaison** | `2_alertes_comparaison.csv` | 290 |
-| **Catégorie C : Cohérence Registre** | `3_alertes_coherence.csv` | 0 |
-| **Diagnostics Cascades** | `4_diagnostics_cascades.csv` | 818 |
+| **Catégorie A : Risques Naturels** | `1_alertes_risques_naturels.csv` | 1605 |
+| **Catégorie B : Comparaison** | `2_alertes_comparaison.csv` | 1522 |
+| **Catégorie C : Cohérence Registre** | `3_alertes_coherence.csv` | 8 |
+| **Diagnostics Cascades** | `4_diagnostics_cascades.csv` | 3135 |
 
 ---
 

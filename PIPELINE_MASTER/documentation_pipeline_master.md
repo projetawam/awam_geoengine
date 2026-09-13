@@ -100,15 +100,19 @@ flowchart TD
 
 ## 4. Modules Transversaux Centralisés
 
-### 4.1 `config_global.py` : Configuration Unifiée & Métadonnées GeoJSON
+### 4.1 `config_global.py` : Configuration Unifiée & Métadonnées GeoJSON & Topographie
 Centralise l'accès aux chemins de fichiers, aux répertoires par défaut et aux caractéristiques des parcelles.
 - **Ingestion dynamique du GeoJSON officiel** (`parcelles_geojson/AWAM_TERRAIN_ALL_ALL_Boundaries_20250501_20260828_v1.0.geojson`) :
-  - `load_parcelles_from_geojson()` : Charge les 11 parcelles avec coordonnées, superficies précises et cultures déclarées.
+  - `load_parcelles_from_geojson()` : Charge les 11 parcelles avec coordonnées, superficies précises et jointure automatique avec la table topographique standardisée `AWAM_DEM_ALL_ALL_SRTM-Topography_20250501_20260828_v2_clean.parquet`.
   - `get_map_parcelles_terrain()` : Construit un dictionnaire enrichi par parcelle contenant :
     - Propriétés agronomiques : `culture`, `area_h`, `nom`
+    - Métadonnées topographiques MNT SRTM 30m (§27.7.6) : `elevation_m`, `slope_deg`, `slope_pct`, `aspect_cardinal`, `exposition_type` (Adret/Ubac), `twi_proxy`, `position_relief`, `correction_thermique_lapse_rate_c`
     - Propriétés physico-chimiques sol lab : `sol_ph`, `sol_nitrates`, `sol_mo`, `sol_salinite`, `sol_ec`, `sol_texture`, `sol_diagnostic`
     - Qualité de l'eau d'irrigation : `eau_ph`, `eau_ec`, `eau_statut`
     - État sanitaire initial : `statut_phytosanitaire`, `pathogene_identifie`
+- **Modèles biophysiques centralisés** :
+  - `corriger_temperature_altitude()` : Gradient adiabatique $\Gamma = -6.5^\circ\text{C / 1 000 m}$.
+  - `calculer_coefficient_ruissellement()` : Facteur de ruissellement modulant $P_{\text{eff}}$ selon la pente et la texture.
 
 ### 4.2 `pipeline_logging.py` : Journalisation Centralisée
 Fournit une fonction unique `get_logger(name)` pour tous les modules :
@@ -192,19 +196,20 @@ Toutes les sorties CSV produites sont **directement compatibles SQL/Parquet** :
 
 ---
 
-## 7. Validation Qualité & Tests Automatisés (Pytest 37/37)
+## 7. Validation Qualité & Tests Automatisés (Pytest 43/43)
 
 L'ensemble de la chaîne analytique fait l'objet d'une suite de tests rigoureuse :
 
 ```bash
-# Lancement de la suite complète de 37 tests
-python -m pytest scripts/ -v
+# Lancement de la suite complète de 43 tests
+python -m pytest AWAM_GEOENGINE/ -v
 ```
 
 ### Couverture des Tests :
-1. **Intégrité spatio-temporelle** : Présence et synchronisation des 11 parcelles sur l'ensemble des modules.
-2. **Bornes et non-régression** : Respect des domaines physiques ($LAI \ge 0$, CWSI $\in [0, 1]$, scores $\in [0, 100]$).
-3. **Idempotence & Causalité** : Stabilité temporelle stricte sans fuite de données futures dans les baselines glissantes.
-4. **Cohérence croisée inter-modules** : Détection et blocage de toute contradiction logique (ex: besoin critique d'irrigation avec score santé $\ge 80\%$).
+1. **Intégrité spatio-temporelle & GeoParquet** : Présence, format GeoParquet OGC et synchronisation des 11 parcelles (`test_extract_pipeline.py`).
+2. **Modélisation Topographique & Biophysique** : Vérification des altitudes réelles, formules de gradient adiabatique ($-6.5^\circ\text{C/km}$), ruissellement et exposition (`test_topography.py`).
+3. **Bornes et non-régression** : Respect des domaines physiques ($LAI \ge 0$, CWSI $\in [0, 1]$, scores $\in [0, 100]$).
+4. **Idempotence & Causalité** : Stabilité temporelle stricte sans fuite de données futures dans les baselines glissantes.
+5. **Cohérence croisée inter-modules** : Détection et blocage de toute contradiction logique (ex: besoin critique d'irrigation avec score santé $\ge 80\%$).
 
-**Résultat : 37/37 tests validés avec 100% de succès (0 fail, 0 error).**
+**Résultat : 43/43 tests validés avec 100% de succès (0 fail, 0 error).**

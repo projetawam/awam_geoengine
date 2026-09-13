@@ -130,6 +130,12 @@ def calculer_indice_sante_awam(panel, poids_custom=None):
         if valeurs_dispo:
             w_sum = sum(poids_actifs)
             score_final = sum(v * (w / w_sum) for v, w in zip(valeurs_dispo, poids_actifs))
+            # Règle biophysique (Loi du minimum de Liebig & non-contradiction inter-modules) :
+            # Si le stress hydrique est déficitaire (< 60), l'indice global de santé ne peut prétendre
+            # à l'excellence (>= 80, Santé Optimale) car le facteur eau est limitant.
+            s_hydr = row.get("score_stress_hydrique")
+            if s_hydr is not None and not pd.isna(s_hydr) and float(s_hydr) < 60.0:
+                score_final = min(score_final, 79.0)
             score_final = round(float(np.clip(score_final, 0.0, 100.0)), 2)
             pastille_str, explication_str = attribuer_pastille_sante(score_final, confiance)
         else:

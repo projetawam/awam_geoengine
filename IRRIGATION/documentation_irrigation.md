@@ -139,6 +139,12 @@ La précipitation est résolue selon la cascade :
 2. Fallback via l'API **Open-Meteo** si la colonne est absente.
 3. **Jamais** $0\text{ mm}$ par défaut → marquage `INDETERMINE` si aucune source n'est disponible.
 
+### 3.7 Modulation Hydrologique Topographique ($P_{\text{eff}}$ & Ruissellement §27.7.6)
+Conformément au bilan hydrique réaliste de la Phase 2 :
+- **Coefficient de ruissellement ($C_{\text{runoff}}$)** : calculé dynamiquement selon la pente ($1.0^\circ\text{ à }6.9^\circ$) et la texture du sol ($0.05\text{ à }0.35$).
+- **Pluie effective infiltrée** : $P_{\text{eff}} = P \times (1 - C_{\text{runoff}})$.
+- **Modulation de l'évapotranspiration de pointe** : ajustée de $+5\text{ à }+10\%$ sur les parcelles en exposition **Adret** (versant Sud à ensoleillement maximal).
+
 ---
 
 ## 4. Orchestrateur (`run_irrigation_analysis.py`)

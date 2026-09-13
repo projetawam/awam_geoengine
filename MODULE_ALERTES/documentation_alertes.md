@@ -120,13 +120,13 @@ L'absence de pluie est vérifiée au niveau de **chaque observation individuelle
 
 ### 4.1 Catégorie A : Risques Naturels & Stress Biophysiques (7 Alertes)
 
-| ID | Type d'Alerte | Conditions de Déclenchement & Formules | Gravité & Garde-fous |
+| ID | Type d'Alerte | Conditions de Déclenchement & Formules | Gravité & Garde-fous Topographiques |
 |:---:|:---|:---|:---|
 | **#1** | `ALERTE_1_STRESS_HYDRIQUE` | ($Z_{\text{NDWI}} \le -1.5$ ou $Z_{\text{NDMI}} \le -1.5$) ET ($CWSI \ge 0.40$ ou $SM_{\text{pct}} \le 20\%$) | `CRITIQUE` si jeunes plants / arboriculture, sinon `AVERTISSEMENT`. Masqué si sol nu ($fCover < 0.05$). |
 | **#2** | `ALERTE_2_STRESS_AZOTE_FORT` | $Z_{\text{NDRE}} \le -1.5$ ou $Z_{\text{CI\_RedEdge}} \le -1.5$, avec $Z_{\text{NDWI}} \ge -0.5$ (signaux eau stables). | `AVERTISSEMENT`. Exclusion mutuelle : si stress hydrique simultané, bascule vers #3. |
 | **#3** | `ALERTE_3_STRESS_COMBINE_EAU_AZOTE` | Co-occurrence simultanée d'un stress hydrique (#1) et d'une chute chlorophylle ($Z_{\text{NDRE}} \le -1.2$). | `CRITIQUE`. Priorité agronomique maximale (double déficit). |
-| **#4** | `ALERTE_4_STRESS_THERMIQUE_CANICULE` | $T_{\max,\text{ERA5}} \ge 35^\circ\text{C}$ ou $LST_{\text{MODIS/Landsat}} \ge 40^\circ\text{C}$. | `CRITIQUE` si $T_{\max} \ge 38^\circ\text{C}$ ou $LST \ge 45^\circ\text{C}$, sinon `AVERTISSEMENT`. |
-| **#5** | `ALERTE_5_EXCES_HUMIDITE_ENGORGEMENT` | $NDWI \ge 0.10$ OU ($P_{\text{cumul 3j}} \ge 30\text{mm}$ et $\Delta\sigma^0_{\text{SAR}} \ge +2.0\text{dB}$). | `AVERTISSEMENT`. Risque d'asphyxie racinaire / lessivage. `INDETERMINE` si pluie manquante. |
+| **#4** | `ALERTE_4_STRESS_THERMIQUE_CANICULE` | $T_{\max,\text{corrigée}} \ge 35^\circ\text{C}$ ou $LST_{\text{MODIS/ECOSTRESS}} \ge 40^\circ\text{C}$. | `CRITIQUE` si $T_{\max,\text{eff}} \ge 38^\circ\text{C}$. **Topographie** : $T_{\max}$ débiaisée par lapse rate ($-6.5^\circ\text{C/km}$) + amplification versant Sud (**Adret** $+0.5^\circ\text{C}$). |
+| **#5** | `ALERTE_5_EXCES_HUMIDITE_ENGORGEMENT` | $Z_{\text{NDWI}} \ge 1.5$ et $P_{\text{cumul}} \ge 40\text{mm}$ (abaissé à $\ge 25\text{mm}$ pour $TWI \ge 8.5$). | `AVERTISSEMENT`. Risque d'asphyxie racinaire et maladies fongiques accru en bas-fond / cuvette. `INDETERMINE` si pluie manquante. |
 | **#6** | `ALERTE_6_SECHERESSE_PROLONGEE` | Durée sans pluie $\ge 21\text{j}$ consécutifs ET ($Z_{\text{NDVI}} \le -1.0$ ou $Z_{\text{SAVI}} \le -1.0$). | `CRITIQUE` si $\ge 30\text{j}$, sinon `AVERTISSEMENT`. `INDETERMINE` si pluie manquante. |
 | **#7** | `ALERTE_7_ANOMALIE_NON_ATTRIBUEE` | Hétérogénéité intra-parcellaire : $Z_{\text{spatial}} \le -2.0$ ou $\Delta \le -20\%$ par rapport à la médiane parcelle. | `AVERTISSEMENT`. Masquage de bordure $-10\text{m}$ obligatoire. |
 

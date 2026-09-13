@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-01T13:18:02.988078",
-  "status": "LIVE",
+  "generated_at": "2026-09-13T14:08:33.891020",
+  "status": "DRY_RUN",
   "naming_convention": "AWAM_[SOURCE]_[SITE]_[PARCEL_ID]_[DATATYPE]_[STARTDATE]_[ENDDATE]_v[VERSION].[EXT]",
   "version": "1.0",
   "raster_dir": "C:\\Users\\Dell\\Desktop\\GeoAI\\WWC_INTERNSHIP\\AWAM_GEOENGINE\\outputs\\latest_rasters",

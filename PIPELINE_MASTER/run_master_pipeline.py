@@ -157,14 +157,22 @@ def valider_coherence_inter_modules() -> bool:
             df_irr[["parcel_id", "date", "STATUT_BESOIN"]],
             on=["parcel_id", "date"], how="inner"
         )
-        inc = m_check[(m_check["STATUT_BESOIN"] == "BESOIN_CRITIQUE") & (m_check["score_sante_awam"] >= 80.0)]
+        # BUGFIX §27.6.D.4 : "BESOIN_CRITIQUE" n'existe JAMAIS dans les sorties de
+        # detect_besoin_vs_irrigation.py (qui produit uniquement BESOIN_COMBLE_* et
+        # BESOIN_NON_COMBLE_*). L'ancien filtre ne matchait donc rien et le test
+        # affichait toujours "0 incohérence" même en cas de contradiction réelle.
+        inc = m_check[
+            m_check["STATUT_BESOIN"].str.startswith("BESOIN_NON_COMBLE", na=False) &
+            (m_check["score_sante_awam"] >= 80.0)
+        ]
         if not inc.empty:
-            msg = f"Contradictions trouvées (Irrigation Besoin Critique MAIS Santé >= 80%) : {len(inc)} cas."
+            msg = (f"Contradictions détectées : {len(inc)} cas où le besoin hydrique "
+                   f"N'EST PAS COMBLÉ mais la santé AWAM est >= 80%.")
             print(f" [❌] {msg}")
             logger.error(msg)
             return False
 
-        msg = "Contrôle de non-contradiction : 0 incohérence décelée."
+        msg = "Contrôle de non-contradiction : 0 incohérence détectée."
         print(f" [✓] {msg}")
         logger.info(msg)
         return True
@@ -172,7 +180,7 @@ def valider_coherence_inter_modules() -> bool:
     except Exception as e:
         msg = f"Erreur lors de la validation croisée : {e}"
         print(f" [❌] {msg}")
-        logger.error(msg)
+        logger.exception(msg)  # BUGFIX §27.6.B.3 : exc_info=True via logger.exception
         return False
 
 
@@ -258,7 +266,13 @@ def main():
         print("\n [⏩ SKIP] STAGE 5 sauté comme demandé.")
 
     # 6. STAGE 6: Validation Croisée Inter-Modules
-    valider_coherence_inter_modules()
+    # BUGFIX §27.6.D.5 : le retour booléen était ignoré → le pipeline annonçait
+    # "succès" même si la validation croisée détectait des contradictions majeures.
+    coherence_ok = valider_coherence_inter_modules()
+    if not coherence_ok:
+        logger.error("Échec de la validation de cohérence croisée inter-modules. Arrêt du pipeline.")
+        print("\n [❌] PIPELINE MASTER TERMINÉ AVEC ERREUR — Validation croisée échouée.")
+        sys.exit(1)
 
     total_elapsed = time.time() - start_total
     msg_fin = f"PIPELINE MASTER COMPLETE avec succès en {total_elapsed / 60:.2f} minutes."

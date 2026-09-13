@@ -164,13 +164,19 @@ Le dictionnaire terrain fournit désormais :
 | $\ge$ `SEUIL_FCOVER_FAIBLE` | `MOYENNE` |
 | $<$ `SEUIL_FCOVER_FAIBLE` | `BASSE` |
 
-### 6.3 Score température/stress (`calculer_score_temperature_stress`)
+### 6.3 Score température/stress corrigé du relief (`calculer_score_temperature_stress`)
 
 $$\text{Score} = \max(0, 100 - \text{pénalité})$$
 
-- **Canicule** : pénalité = $(T_{max} - \text{SEUIL\_CHALEUR\_STRESS\_C}) \times 8.0$ par degré au-dessus du seuil.
-- **Gel sévère** ($T_{min} \le 0°C$) : pénalité $+60$.
-- **Gel léger** ($T_{min} \le$ seuil léger) : pénalité $+30$.
+Conformément au **§27.7.6 de la Phase 2**, les températures brutes ERA5 sont corrigées de l'altitude réelle et de l'exposition :
+- **Correction adiabatique** : $T_{\text{eff}} = T_{\text{ERA5}} - 0.0065 \times (z_{\text{parcelle}} - z_{\text{ERA5_maille}})$.
+- **Modulation Adret** : $+0.5^\circ\text{C}$ sur versant Sud / Sud-Ouest (ensoleillement maximal).
+- **Canicule** : pénalité = $(T_{\text{max, eff}} - \text{SEUIL\_CHALEUR\_STRESS\_C}) \times 8.0$ par degré au-dessus du seuil.
+- **Gel sévère** ($T_{\text{min, eff}} \le 0^\circ\text{C}$) : pénalité $+60$ (détection exacte des gelées tardives d'altitude à Makthar).
+- **Gel léger** ($T_{\text{min, eff}} \le 2^\circ\text{C}$) : pénalité $+30$.
+
+### 6.4 Vulnérabilité fongique & Bas-fond TWI (`calculer_score_risque_maladie`)
+- En plus du découplage $NDRE / NDVI$ et des conditions d'humidité/température optimales ($18\text{--}26^\circ\text{C}$), les parcelles situées en cuvette topographique ou bas-fond ($TWI \ge 8.5$ ou position `BAS_FOND_PLAT`) reçoivent une majoration de pénalité ($+10$ pts) pour refléter la stagnation d'humidité résiduelle favorisant les maladies cryptogamiques.
 
 ---
 

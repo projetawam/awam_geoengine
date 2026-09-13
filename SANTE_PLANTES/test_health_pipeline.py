@@ -107,12 +107,24 @@ def test_score_ranges_0_100(sample_health_panel):
 
 
 def test_idempotence_scores(sample_health_panel):
-    """Test #5 : L'exécution répétée du calcul des scores produit le même résultat."""
-    res1 = chs.calculer_tous_les_scores_sante(sample_health_panel)
-    res2 = chs.calculer_tous_les_scores_sante(res1)
-    
-    pd.testing.assert_series_equal(res1["score_sante_awam"] if "score_sante_awam" in res1 else res1["score_vigueur_vegetative"],
-                                   res2["score_sante_awam"] if "score_sante_awam" in res2 else res2["score_vigueur_vegetative"])
+    """Test #5 : L'exécution répétée du calcul des scores produit le même résultat.
+
+    BUGFIX §27.3.7 (variante) : l'ancienne version appelait calculer_tous_les_scores_sante(res1)
+    sur un résultat déjà calculé — tautologique. Corrigé : deux runs sur des copies du panel brut.
+    """
+    panel_brut_1 = sample_health_panel.copy()
+    panel_brut_2 = sample_health_panel.copy()
+
+    res1 = chs.calculer_tous_les_scores_sante(panel_brut_1)
+    res2 = chs.calculer_tous_les_scores_sante(panel_brut_2)
+
+    col_ref = "score_vigueur_vegetative"
+    assert col_ref in res1.columns, f"Colonne '{col_ref}' manquante."
+    pd.testing.assert_series_equal(
+        res1[col_ref].reset_index(drop=True),
+        res2[col_ref].reset_index(drop=True),
+        check_names=False
+    )
 
 
 def test_temperature_stress_penalty(sample_health_panel):

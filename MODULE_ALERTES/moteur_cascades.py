@@ -29,14 +29,6 @@ for p in [str(SCRIPTS_DIR), str(IRRIGATION_DIR), str(SANTE_DIR), str(MODULE_DIR)
     if p not in sys.path:
         sys.path.insert(0, p)
 
-# Import réutilisé depuis IRRIGATION (§11.3)
-try:
-    import detect_besoin_vs_irrigation as dbi
-    croiser_besoin_irrigation = dbi.croiser_besoin_irrigation
-except ImportError:
-    def croiser_besoin_irrigation(df_panel):
-        return pd.DataFrame()
-
 
 def executer_moteur_cascades(
     df_alertes_all: pd.DataFrame,

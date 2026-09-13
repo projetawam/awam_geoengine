@@ -68,7 +68,11 @@ def test_3_coherence_colonnes_fichiers_sorties():
 
 
 def test_4_alignement_spatial_et_temporel_parcelles():
-    """Test #4 : Vérifie que les 11 parcelles sont 100% identiques entre Santé, Irrigation et Alertes."""
+    """Test #4 : Vérifie que les 11 parcelles ET les plages de dates sont identiques
+    entre Santé, Irrigation et Alertes.
+    BUGFIX §27.6.D.10 : le test était nommé 'spatial_et_temporel' mais ne vérifiait
+    que le spatial (parcel_id). Ajout d'assertions strictes sur min/max de date.
+    """
     sante_csv = SANTE_OUT_DIR / "1_scores_sante_composites.csv"
     irrig_csv = IRRIG_OUT_DIR / "1_suivi_besoins_plante.csv"
     alert_csv = ALERT_OUT_DIR / "5_alertes_pixel_10m.csv"
@@ -80,6 +84,7 @@ def test_4_alignement_spatial_et_temporel_parcelles():
     df_irrig = pd.read_csv(irrig_csv)
     df_alert = pd.read_csv(alert_csv)
 
+    # --- Alignement SPATIAL ---
     p_sante = set(df_sante["parcel_id"].unique())
     p_irrig = set(df_irrig["parcel_id"].unique())
     p_alert = set(df_alert["parcel_id"].unique())
@@ -87,9 +92,31 @@ def test_4_alignement_spatial_et_temporel_parcelles():
     assert p_sante == p_irrig == p_alert, "Incohérence dans le jeu de parcelles inter-modules."
     assert len(p_sante) == 11, f"Nombre de parcelles inattendu : {len(p_sante)} (11 attendues)"
 
+    # --- Alignement TEMPOREL ---
+    for df, name in [(df_sante, "SANTE"), (df_irrig, "IRRIGATION"), (df_alert, "ALERTES")]:
+        df["date"] = pd.to_datetime(df["date"])
+
+    tolerance_days = 1  # les modules peuvent différer d'un jour au maximum
+    sante_min, sante_max = df_sante["date"].min(), df_sante["date"].max()
+    irrig_min, irrig_max = df_irrig["date"].min(), df_irrig["date"].max()
+    alert_min, alert_max = df_alert["date"].min(), df_alert["date"].max()
+
+    assert abs((sante_min - irrig_min).days) <= tolerance_days, (
+        f"Décalage de date de début SANTE/IRRIGATION : {sante_min} vs {irrig_min}"
+    )
+    assert abs((sante_max - irrig_max).days) <= tolerance_days, (
+        f"Décalage de date de fin SANTE/IRRIGATION : {sante_max} vs {irrig_max}"
+    )
+
 
 def test_5_regle_non_contradiction():
-    """Test #5 : Vérifie l'absence de contradiction logique (Irrigation Besoin Critique MAIS Santé >= 80%)."""
+    """Test #5 : Vérifie l'absence de contradiction logique.
+
+    Une contradiction = STATUT_BESOIN commence par 'BESOIN_NON_COMBLE' ET score_sante_awam >= 80%.
+    BUGFIX §27.6.D.9 : l'ancien test cherchait 'BESOIN_CRITIQUE' qui n'existe JAMAIS dans
+    les sorties de detect_besoin_vs_irrigation.py. Le test passait toujours par construction,
+    ne détectant rien. Corrigé avec le vrai préfixe 'BESOIN_NON_COMBLE'.
+    """
     sante_csv = SANTE_OUT_DIR / "1_scores_sante_composites.csv"
     irrig_csv = IRRIG_OUT_DIR / "1_suivi_besoins_plante.csv"
 
@@ -108,8 +135,14 @@ def test_5_regle_non_contradiction():
         on=["parcel_id", "date"], how="inner"
     )
 
-    inc = m[(m["STATUT_BESOIN"] == "BESOIN_CRITIQUE") & (m["score_sante_awam"] >= 80.0)]
-    assert inc.empty, f"Contradictions détectées : {len(inc)} cas où le besoin est critique mais la santé est >= 80%"
+    inc = m[
+        m["STATUT_BESOIN"].str.startswith("BESOIN_NON_COMBLE", na=False) &
+        (m["score_sante_awam"] >= 80.0)
+    ]
+    assert inc.empty, (
+        f"Contradictions détectées : {len(inc)} cas où le besoin hydrique n'est pas comblé "
+        f"mais la santé AWAM est >= 80%"
+    )
 
 
 if __name__ == "__main__":

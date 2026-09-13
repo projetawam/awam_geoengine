@@ -37,27 +37,50 @@ logger = get_logger("AWAM.SchemaValidator")
 def valider_et_nettoyer_panel(df: pd.DataFrame) -> pd.DataFrame:
     """
     Valide et nettoie un DataFrame de panel multi-capteurs.
+
+    CORRECTIONS PHASE 2 (§27.6.C) :
+    - Vérification des colonnes obligatoires avant tout traitement.
+    - Forçage explicite du typage numérique pour détecter les colonnes object masquées.
+    - Déduplication géospatiale : inclut longitude/latitude pour ne pas détruire
+      les observations pixel distinctes partageant la même (parcel_id, date).
+    - Tri explicite avant déduplication pour un comportement déterministe.
+    - Suppression du df.copy() systématique (mutation in-place sécurisée).
     """
     if df.empty:
         logger.warning("DataFrame vide fourni au validateur de schéma.")
         return df
 
+    # BUGFIX §27.6.C.4 : Vérification des colonnes obligatoires
+    colonnes_obligatoires = ["parcel_id", "date"]
+    manquantes = [c for c in colonnes_obligatoires if c not in df.columns]
+    if manquantes:
+        raise ValueError(
+            f"[SchemaValidator] Colonnes obligatoires manquantes : {manquantes}. "
+            f"Colonnes disponibles : {list(df.columns)}"
+        )
+
     df_clean = df.copy()
 
     # 1. Typage strict des colonnes obligatoires
-    if "date" in df_clean.columns:
-        df_clean["date"] = pd.to_datetime(df_clean["date"], errors="coerce")
-    
-    for col_str in ["parcel_id", "site", "culture"]:
+    df_clean["date"] = pd.to_datetime(df_clean["date"], errors="coerce")
+    df_clean["parcel_id"] = df_clean["parcel_id"].astype(str)
+    for col_str in ["site", "culture"]:
         if col_str in df_clean.columns:
             df_clean[col_str] = df_clean[col_str].astype(str)
 
+    # BUGFIX §27.6.C.3 : Forçage explicite du typage numérique
+    # Les colonnes numériques stockées en object (suite à une concaténation ou
+    # un export CSV sans typage) étaient silencieusement ignorées par le clamping.
+    for idx_col in BORNES_INDICES:
+        if idx_col in df_clean.columns and df_clean[idx_col].dtype == object:
+            df_clean[idx_col] = pd.to_numeric(df_clean[idx_col], errors="coerce")
+            logger.warning(f"Colonne '{idx_col}' était de type object — convertie en numérique.")
+
     # 2. Suppression des dates invalides (NaT)
-    if "date" in df_clean.columns:
-        initial_len = len(df_clean)
-        df_clean = df_clean.dropna(subset=["date"])
-        if len(df_clean) < initial_len:
-            logger.warning(f"Suppression de {initial_len - len(df_clean)} ligne(s) avec des dates invalides.")
+    initial_len = len(df_clean)
+    df_clean = df_clean.dropna(subset=["date"])
+    if len(df_clean) < initial_len:
+        logger.warning(f"Suppression de {initial_len - len(df_clean)} ligne(s) avec des dates invalides.")
 
     # 3. Clamping des indices spectraux et physiques hors-bornes
     count_clamped = 0
@@ -72,12 +95,25 @@ def valider_et_nettoyer_panel(df: pd.DataFrame) -> pd.DataFrame:
     if count_clamped > 0:
         logger.info(f"Sanitization : {count_clamped} valeur(s) hors-bornes clampée(s) selon BORNES_INDICES.")
 
-    # 4. Dédoublonnage sur (parcel_id, date) si présent
-    if "parcel_id" in df_clean.columns and "date" in df_clean.columns:
-        before_dup = len(df_clean)
-        df_clean = df_clean.drop_duplicates(subset=["parcel_id", "date"], keep="last")
-        if len(df_clean) < before_dup:
-            logger.info(f"Dédoublonnage : {before_dup - len(df_clean)} doublons supprimés.")
+    # 4. Dédoublonnage géospatial
+    # BUGFIX §27.6.C.1 : L'ancien subset=[parcel_id, date] détruisait toutes les
+    # observations pixel distinctes (longitude, latitude différents) partageant la
+    # même (parcel_id, date) — n'en conservant qu'une seule par jour par parcelle.
+    # BUGFIX §27.6.C.2 : Tri explicite avant dédup pour un comportement déterministe.
+    coord_cols = [c for c in ["longitude", "latitude"] if c in df_clean.columns]
+    dedup_subset = ["parcel_id", "date"] + coord_cols
+
+    sort_cols = ["parcel_id", "date"] + coord_cols
+    df_clean = df_clean.sort_values(sort_cols, na_position="last")
+
+    before_dup = len(df_clean)
+    df_clean = df_clean.drop_duplicates(subset=dedup_subset, keep="last")
+    n_removed = before_dup - len(df_clean)
+    if n_removed > 0:
+        logger.info(
+            f"Dédoublonnage géospatial ({'+'.join(dedup_subset)}) : "
+            f"{n_removed} doublons exacts supprimés."
+        )
 
     return df_clean
 

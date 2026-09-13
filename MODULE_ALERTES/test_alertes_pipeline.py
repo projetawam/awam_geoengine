@@ -139,24 +139,69 @@ def test_8_coherence_colonnes_csv(sample_alertes_panel):
 
 
 def test_10_exclusion_mutuelle_chaine1_et_alerte2():
-    """Test #10 : Si NDWI est en stress (Z <= -1.5), l'alerte #2 ne doit PAS se déclencher."""
+    """Test #10 : Si NDWI est en stress fort (Z <= -1.5), l'alerte #2 (azote seul) ne doit PAS se déclencher.
+
+    BUGFIX §27.3.7 : l'ancienne version injectait Z_NDRE et Z_NDWI directement en dur,
+    court-circuitant complètement les fonctions de calcul de baselines_communes.
+    Si calculer_baseline_glissante_causale était corrompu, le test passait quand même.
+    Version corrigée : le panel synthétique contient des séries temporelles brutes
+    avec un NDWI historiquement élevé puis une chute brutale, forçant un Z-score réel <= -1.5.
+    """
+    import numpy as np
+
+    # 30 jours de NDWI élevé (baseline), puis 5 jours de chute brutale
+    # Le Z-score calculé sur la fenêtre glissante doit descendre sous -1.5
+    n_baseline = 30
+    n_stress = 5
+    n_total = n_baseline + n_stress
+    parcel = "P2"
+    culture = "Amandier"
+    site = "sidi_mechreg"
+
+    ndwi_baseline = np.full(n_baseline, 0.10)  # valeur haute stable
+    ndwi_stress   = np.full(n_stress, -0.40)   # chute brutale
+    ndwi_series   = np.concatenate([ndwi_baseline, ndwi_stress])
+
+    ndre_baseline = np.full(n_baseline, 0.18)   # NDRE stable
+    ndre_stress   = np.full(n_stress, 0.15)     # NDRE légèrement bas (pas de chute azote)
+    ndre_series   = np.concatenate([ndre_baseline, ndre_stress])
+
     df_stress_eau = pd.DataFrame({
-        "site": ["sidi_mechreg"] * 10,
-        "parcel_id": ["P2"] * 10,
-        "culture": ["Amandier"] * 10,
-        "date": pd.date_range("2026-06-01", periods=10),
-        "NDVI": [0.30] * 10,
-        "NDRE": [0.10] * 10,
-        "Z_NDRE": [-2.0] * 10,
-        "NDWI": [-0.30] * 10,
-        "Z_NDWI": [-2.0] * 10,  # Z_NDWI <= -1.5 (eau en stress!)
-        "fCover": [0.20] * 10
+        "site":       [site] * n_total,
+        "parcel_id":  [parcel] * n_total,
+        "culture":    [culture] * n_total,
+        "date":       pd.date_range("2026-04-01", periods=n_total, freq="1D"),
+        "NDVI":       np.concatenate([np.full(n_baseline, 0.45), np.full(n_stress, 0.30)]),
+        "NDRE":       ndre_series,
+        "NDWI":       ndwi_series,
+        "NDMI":       np.concatenate([np.full(n_baseline, 0.10), np.full(n_stress, -0.30)]),
+        "fCover":     np.concatenate([np.full(n_baseline, 0.30), np.full(n_stress, 0.20)]),
     })
+
+    # Vérifier que le calcul de Z-score réel produit bien Z_NDWI <= -1.5 sur les jours de stress
+    z_ndwi = bc.calculer_baseline_glissante_causale(df_stress_eau, "NDWI", window_days=30)
+    z_ndwi_stress_vals = z_ndwi.iloc[n_baseline:].dropna()
+    assert (z_ndwi_stress_vals <= -1.5).any(), (
+        f"Le panel synthétique ne produit pas de Z_NDWI <= -1.5. "
+        f"Z min obsérvé : {z_ndwi_stress_vals.min():.2f}. "
+        "Revoir la construction du panel de stress hydrique."
+    )
+
+    # Détection des alertes sur le panel complet
     res = da.detecter_toutes_les_alertes(df_stress_eau)
     df_all = _concat_alertes(res)
 
-    alt2 = df_all[(df_all["type_alerte"] == "ALERTE_2_STRESS_AZOTE_FORT") & (df_all["statut"] == "DECLENCHEE")]
-    assert alt2.empty, "L'alerte #2 ne doit pas se déclencher quand l'eau est aussi en stress (c'est l'alerte #3)."
+    # Sur les jours de stress (eau ET pas azote isolé), l'alerte #2 ne doit pas se déclencher
+    dates_stress = df_stress_eau["date"].iloc[n_baseline:].tolist()
+    alt2 = df_all[
+        (df_all["type_alerte"] == "ALERTE_2_STRESS_AZOTE_FORT") &
+        (df_all["statut"] == "DECLENCHEE") &
+        (df_all["date"].isin(dates_stress))
+    ]
+    assert alt2.empty, (
+        "L'alerte #2 ne doit pas se déclencher quand l'eau est aussi en stress "
+        f"(c'est l'alerte #3). Déclenchée {len(alt2)} fois."
+    )
 
 
 def test_11_recolte_desherbage_sans_changement():

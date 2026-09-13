@@ -425,6 +425,7 @@ def calculer_score_risque_maladie(panel):
         tmin = row.get("Tmin_C")
         precip = row.get("precip_mm")
         rh = row.get("RH_pct", row.get("rh_era5", row.get("relative_humidity_pct")))
+        twi = row.get("twi_proxy", 8.0)
 
         if tmax is not None and tmin is not None and not pd.isna(tmax) and not pd.isna(tmin):
             eval_done = True
@@ -437,7 +438,11 @@ def calculer_score_risque_maladie(panel):
                     humidite_elevee = True
 
                 if humidite_elevee:
-                    risque_penalite += 35.0
+                    # Stagnation d'humidité accrue en bas-fond / cuvette topographique (TWI élevé §27.7.6)
+                    penalite_humid = 35.0
+                    if not pd.isna(twi) and twi >= 9.0:
+                        penalite_humid += 10.0  # Vulnérabilité fongique accrue en cuvette
+                    risque_penalite += penalite_humid
 
         if eval_done:
             score_final = max(0.0, 100.0 - risque_penalite)
@@ -501,12 +506,13 @@ def calculer_score_qualite_sol(panel):
 
 
 # ===========================================================================
-# 9. AJOUT MÉTHODOLOGIQUE 2 : SCORE STRESS TEMPÉRATURE / GEL (ERA5)
+# 9. AJOUT MÉTHODOLOGIQUE 2 : SCORE STRESS TEMPÉRATURE / GEL CORRIGÉ DU RELIEF (ERA5 + MNT)
 # ===========================================================================
 def calculer_score_temperature_stress(panel):
     """
     Score Stress Température (0-100) : Détecte les chocs thermiques (Canicule Tmax >= 38°C)
-    et les risques de gel tardif (Tmin <= 0°C).
+    et les risques de gel tardif (Tmin <= 0°C), corrigés par le gradient adiabatique (-6.5°C/1000m)
+    et l'exposition adret/ubac (§27.7.6).
     """
     df = panel.copy()
     scores = []
@@ -514,16 +520,31 @@ def calculer_score_temperature_stress(panel):
     for _, row in df.iterrows():
         tmax = row.get("Tmax_C")
         tmin = row.get("Tmin_C")
+        delta_t_lapse = row.get("correction_thermique_lapse_rate_c", 0.0)
+        expo = str(row.get("exposition_type", "TRANSITION")).upper()
 
-        penalite = 0.0
+        # Températures corrigées d'altitude
         if tmax is not None and not pd.isna(tmax):
-            if tmax >= SEUIL_CHALEUR_STRESS_C:
-                penalite += (tmax - SEUIL_CHALEUR_STRESS_C) * 8.0
+            tmax_eff = float(tmax) + (float(delta_t_lapse) if not pd.isna(delta_t_lapse) else 0.0)
+            if expo == "ADRET":
+                tmax_eff += 0.5  # Amplification radiative sur versant Sud
+        else:
+            tmax_eff = np.nan
 
         if tmin is not None and not pd.isna(tmin):
-            if tmin <= SEUIL_GEL_RISQUE_SEVERE:
+            tmin_eff = float(tmin) + (float(delta_t_lapse) if not pd.isna(delta_t_lapse) else 0.0)
+        else:
+            tmin_eff = np.nan
+
+        penalite = 0.0
+        if not pd.isna(tmax_eff):
+            if tmax_eff >= SEUIL_CHALEUR_STRESS_C:
+                penalite += (tmax_eff - SEUIL_CHALEUR_STRESS_C) * 8.0
+
+        if not pd.isna(tmin_eff):
+            if tmin_eff <= SEUIL_GEL_RISQUE_SEVERE:
                 penalite += 60.0
-            elif tmin <= SEUIL_GEL_RISQUE_LEGER:
+            elif tmin_eff <= SEUIL_GEL_RISQUE_LEGER:
                 penalite += 30.0
 
         scores.append(round(max(0.0, 100.0 - penalite), 2))
@@ -608,9 +629,20 @@ def interpoler_toutes_les_sources_multi_capteurs(panel):
             if present:
                 g_sorted[present] = g_sorted[present].ffill(limit=lim)
 
-        # Précipitations : flux journalier strictement non propagé dans le temps
+        # BUGFIX §27.4.1 : L'imputation precip_mm = 0.0 était une régression du
+        # bug identique corrigé dans IRRIGATION. Si la météo est absente,
+        # fillna(0) conclut faussement 'épisode sec' et aggrave artificiellement
+        # le score de stress hydrique. Les NaN sont préservés et un indicateur
+        # booléen de complétude est ajouté pour les modules avals.
         if "precip_mm" in g_sorted.columns:
-            g_sorted["precip_mm"] = g_sorted["precip_mm"].fillna(0.0)
+            n_nan_precip = g_sorted["precip_mm"].isna().sum()
+            g_sorted["precip_meteo_disponible"] = g_sorted["precip_mm"].notna()
+            if n_nan_precip > 0:
+                import logging as _log
+                _log.getLogger("AWAM.HealthScores").warning(
+                    f"precip_mm : {n_nan_precip} valeurs manquantes préservées (NaN) "
+                    f"pour la parcelle du groupe en cours — pas d'imputation à 0."
+                )
 
         dfs_parcelles.append(g_sorted)
 
