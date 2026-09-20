@@ -7,7 +7,7 @@
 **Stage dans le Pipeline Master :** Stage 4  
 **Modules transversaux :** `PIPELINE_MASTER/config_global.py` (chemins, bornes, chargeur GeoJSON), `PIPELINE_MASTER/registre_evenements_terrain.csv` (événements terrain)  
 **Données sources :** Sorties `clean/*.parquet` de la pipeline d'extraction spatiale (GeoJSONs officiels : `parcelles_geojson/AWAM_TERRAIN_ALL_ALL_Boundaries_20250501_20260828_v1.0.geojson`)  
-**Dernière mise à jour :** 31 Août 2026  
+**Dernière mise à jour :** 20 Septembre 2026  
 
 ---
 
@@ -86,7 +86,7 @@ flowchart TD
         STRESS_SMI --> SCORE_S
         STRESS_SM --> SCORE_S
         STRESS_OPT --> SCORE_S
-        SCORE_S --> CROSS["croiser_besoin_irrigation()<br/>3 colonnes de vérité :<br/>STATUT_BESOIN, STATUT_APPORT_EAU, EFFET_SUR_LE_STRESS"]
+        SCORE_S --> CROSS["croiser_besoin_irrigation()<br/>3 colonnes de vérité découplées :<br/>STATUT_BESOIN : BESOIN_NON_COMBLE_*/BESOIN_COMBLE_*<br/>STATUT_APPORT_EAU : (irrigation/pluie)<br/>INTERPRETATION_AGRO : (texte explicatif)"]
         SCORE --> CROSS
     end
 
@@ -171,8 +171,8 @@ Pour chaque parcelle, le **taux de comblement observé** (jours de stress suivis
 | Fichier | Contenu |
 |:---|:---|
 | `rapport_irrigation_vs_pluie.csv` | Détections d'apports d'eau classifiées par jour et parcelle |
-| `1_suivi_besoins_plante.csv` | Évaluation du stress hydrique et besoin en eau |
-| `2_evaluation_apports_irrigation.csv` | Évaluation croisée besoin ↔ irrigation avec triple vérité |
+| `1_suivi_besoins_plante.csv` | Évaluation du stress hydrique et besoin en eau (1 354 lignes — run 20/09/2026) |
+| `2_evaluation_apports_irrigation.csv` | Évaluation croisée besoin ↔ irrigation avec colonnes découplées : `STATUT_BESOIN` (`BESOIN_NON_COMBLE_*` / `BESOIN_COMBLE_*`), `STATUT_APPORT_EAU`, `INTERPRETATION_AGRO` (536 lignes — run 20/09/2026) |
 | `3_significativite_h0_parcelles.csv` | Taux de comblement observé vs distribution nulle Monte-Carlo $H_0$ ($p_{95}$, verdict d'informativité) |
 | `00_SYNTHESE_PARCELLES.md` | Synthèse d'aide à la décision agronomique |
 

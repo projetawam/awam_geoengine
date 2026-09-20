@@ -7,7 +7,7 @@
 **Stage dans le Pipeline Master :** Stage 5  
 **Modules transversaux :** `PIPELINE_MASTER/config_global.py`, `PIPELINE_MASTER/pipeline_logging.py`, `PIPELINE_MASTER/schema_validator.py`, `PIPELINE_MASTER/registre_evenements_terrain.csv`  
 **Données sources :** Base `scripts/outputs/pixel_indices_database/clean/*.parquet` (S2, S1, MODIS-LST, ECOSTRESS, NISAR, ERA5)  
-**Dernière mise à jour :** 31 Août 2026  
+**Dernière mise à jour :** 20 Septembre 2026  
 
 ---
 
@@ -73,11 +73,11 @@ flowchart TD
 
     subgraph OUT ["Sorties CSV & Synthèse"]
         CASCADE --> CSV1["1_alertes_risques_naturels.csv"]
-        CASCADE --> CSV2["2_alertes_comparaison_declaration.csv"]
-        CASCADE --> CSV3["3_alertes_coherence_registre.csv"]
+        CASCADE --> CSV2["2_alertes_comparaison.csv"]
+        CASCADE --> CSV3["3_alertes_coherence.csv"]
         CASCADE --> CSV4["4_diagnostics_cascades.csv"]
-        CASCADE --> CSV5["5_alertes_pixel_10m.csv (92k pixels)"]
-        CASCADE --> MD["00_SYNTHESE_ALERTES.md"]
+        CASCADE --> CSV5["5_alertes_pixel_10m.csv (95 959 pixels)"]
+        CASCADE --> MD["00_SYNTHESE_ALERTES_GLOBALES.md"]
     end
 ```
 
@@ -193,11 +193,11 @@ Chaque alerte liée se voit attribuer :
 | Fichier | Catégorie / Rôle | Contenu & Structure |
 |:---|:---|:---|
 | `1_alertes_risques_naturels.csv` | Catégorie A | Alertes 1 à 7 (Stress eau, azote, thermique, engorgement, anomalies) |
-| `2_alertes_comparaison_declaration.csv` | Catégorie B | Alertes 8 à 10 (Écart besoin, phénologie, occupation) |
-| `3_alertes_coherence_registre.csv` | Catégorie C | Alertes 11 à 15 (Cohérence tâches terrain vs satellite) |
+| `2_alertes_comparaison.csv` | Catégorie B | Alertes 8 à 10 (Écart besoin, phénologie, occupation) |
+| `3_alertes_coherence.csv` | Catégorie C | Alertes 11 à 15 (Cohérence tâches terrain vs satellite) |
 | `4_diagnostics_cascades.csv` | Causalité | Enchaînements causaux temporels (Chaînes 1, 2, 3) |
-| `5_alertes_pixel_10m.csv` | Spatial 10m | Détections fines désagrégées au pixel (92 011 lignes) |
-| `00_SYNTHESE_ALERTES.md` | Synthèse | Rapport d'alerte agronomique exécutif complet |
+| `5_alertes_pixel_10m.csv` | Spatial 10m | Détections fines désagrégées au pixel (95 959 lignes — run 20/09/2026) |
+| `00_SYNTHESE_ALERTES_GLOBALES.md` | Synthèse | Rapport d'alerte agronomique exécutif complet |
 
 ---
 

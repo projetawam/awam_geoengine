@@ -8,7 +8,7 @@
 **Modules transversaux :** `PIPELINE_MASTER/config_global.py`, `PIPELINE_MASTER/pipeline_logging.py`, `PIPELINE_MASTER/schema_validator.py`  
 **Données sources :** Base de données nettoyée `scripts/outputs/pixel_indices_database/clean/*.parquet` (8 sources multi-capteurs)  
 **Calibration terrain :** `scripts/outputs/raw_vari_calibration/` (VARI calibré par photos terrain)  
-**Dernière mise à jour :** 31 Août 2026
+**Dernière mise à jour :** 20 Septembre 2026
 
 ---
 
@@ -76,7 +76,7 @@ flowchart TD
 
     subgraph AWAM ["compute_awam_index.py"]
         S1 & S2 & S3 & S4 & S5 & S6 & S7 --> GATE{"Filtres de sécurité AWAM"}
-        GATE -->|Sol Nu| SN["⚪ SOL_NU"]
+        GATE -->|Sol Nu| SN["⚪ SOL_NU\n(fCover < 0.03 ou culture = 'Sol nu') "]
         GATE -->|Sans Donnée Optique| NI["⚪ DONNÉES INSUFFISANTES"]
         GATE -->|Optique OK| AWAM_CALC["calculer_indice_sante_awam()<br/>Somme pondérée 7 scores"]
         AWAM_CALC --> PASTILLE["Pastille & Confiance<br/>🟢 SAIN / 🟡 ATTENTION / 🔴 CRITIQUE"]
@@ -218,3 +218,4 @@ La suite `test_health_pipeline.py` valide :
 - **Polyculture** : la moyenne des $k$ polyculture est bien calculée.
 - **Idempotence** : le pipeline produit des résultats identiques sur deux exécutions consécutives.
 - **Cohérence anomalies** : toutes les lignes du fichier d'alertes vérifient au moins un des critères de déclenchement.
+- **Label Sol nu** : vérification que le label canonique `"Sol nu"` est utilisé dans tous les CSV de sortie (plus de `"Aucune"` depuis la correction du 20/09/2026).

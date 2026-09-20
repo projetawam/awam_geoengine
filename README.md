@@ -74,3 +74,16 @@ Execute the complete regression and verification test suite:
 ```bash
 pytest -v
 ```
+---
+
+## 📊 Last Pipeline Run — 20 Septembre 2026
+
+| Stage | Module | Statut | Temps | Sorties |
+|:---:|:---|:---:|:---:|:---|
+| 1 | Extraction (EXTRACT) | ⏭ Skipped | — | *parquets existants utilisés* |
+| 2 | Calibration VARI | ⏭ Skipped | — | *calibrated_clean.parquet* |
+| 3 | Santé des Plantes | ✅ OK | ~6s | 3 CSV + Synthèse MD |
+| 4 | Irrigation & Hydrique | ✅ OK | 44.3s | 536 + 1354 lignes |
+| 5 | Alertes Multi-Sources | ✅ OK | 41.3s | 1605 + 1522 + 8 alertes + 3135 cascades |
+| 6 | Validation Croisée | ✅ OK | <1s | 11 parcelles sync — 0 incohérence |
+| **Total** | | ✅ **COMPLET** | **3.79 min** | |

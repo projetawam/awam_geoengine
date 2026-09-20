@@ -115,12 +115,24 @@ def load_parcelles_from_geojson(geojson_path: Path = None) -> pd.DataFrame:
                 canon_id = props["parcel_id"]
             else:
                 site_prefix = geojson_path.stem.split("_")[3] if len(geojson_path.stem.split("_")) > 3 else "site"
-                if site_prefix not in nom_parcelle.lower():
-                    canon_id = f"sidi_mechreg_{nom_parcelle.replace(' ', '_')}_{fid}"
+                clean_site = site_prefix.replace("-", "_").lower()
+                if clean_site not in nom_parcelle.lower():
+                    canon_id = f"{clean_site}_{nom_parcelle.replace(' ', '_')}_{fid}"
                 else:
                     canon_id = nom_parcelle
 
             props["parcel_id"] = canon_id
+            
+            # Harmonisation de la culture (normalisation de "Aucune" en "Sol nu")
+            cult_brute = str(props.get("culture") or props.get("cult") or "").strip()
+            if cult_brute.lower() in ["aucune", "aucun", "none", "sans culture", "sans_culture"]:
+                props["culture"] = "Sol nu"
+                props["is_sol_nu"] = True
+            elif cult_brute.lower() in ["sol nu", "sol_nu", "bare soil", "bare_soil"]:
+                props["culture"] = "Sol nu"
+                props["is_sol_nu"] = True
+            else:
+                props["is_sol_nu"] = False
             props["geometry_type"] = geom.get("type", "Unknown")
             records.append(props)
 

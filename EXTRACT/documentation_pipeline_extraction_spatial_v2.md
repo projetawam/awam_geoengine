@@ -5,7 +5,7 @@
 **Chemin du module :** `scripts/EXTRACT/`  
 **Scripts couverts :** `gee_export_pixel_indices_database.py`, `earthdata_export_pixel_indices_database.py`, `clean_extracted_data.py`, `run_all_extractions.py`, `export_latest_rasters.py`, `test_extract_pipeline.py`  
 **Stage dans le Pipeline Master :** Stage 1  
-**Dernière mise à jour :** 26 Août 2026
+**Dernière mise à jour :** 20 Septembre 2026
 
 
 ## 📑 Table des Matières

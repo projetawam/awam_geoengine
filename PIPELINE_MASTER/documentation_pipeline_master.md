@@ -4,7 +4,7 @@
 **Sites d'étude :** Makthar (Gouvernorat de Siliana, 6 parcelles) & Sidi Mechreg (Gouvernorat de Bizerte, 5 parcelles) — **11 Parcelles Officielles**  
 **Chemin :** `scripts/PIPELINE_MASTER/`  
 **Scripts du module :** `config_global.py`, `pipeline_logging.py`, `schema_validator.py`, `registre_evenements_terrain.csv`, `run_master_pipeline.py`, `test_master_pipeline.py`  
-**Dernière mise à jour :** 31 Août 2026  
+**Dernière mise à jour :** 20 Septembre 2026  
 
 ---
 
@@ -73,7 +73,7 @@ flowchart TD
     end
 
     subgraph S6 ["STAGE 6 : Validation Croisée Inter-Modules"]
-        VAL["Contrôle de non-contradiction<br/>• Synchronisation 11 parcelles<br/>• Règle Besoin Critique vs Santé ≥ 80%<br/>• 0 contradiction tolérée"]
+        VAL["Contrôle de non-contradiction<br/>• Synchronisation 11 parcelles<br/>• Règle BESOIN_NON_COMBLE + Santé ≥ 80% = contradiction<br/>• 0 contradiction tolérée — sys.exit(1) si incohérence"]
     end
 
     RUN --> S1 --> S2 --> S3 --> S4 --> S5 --> S6
@@ -210,6 +210,8 @@ python -m pytest AWAM_GEOENGINE/ -v
 2. **Modélisation Topographique & Biophysique** : Vérification des altitudes réelles, formules de gradient adiabatique ($-6.5^\circ\text{C/km}$), ruissellement et exposition (`test_topography.py`).
 3. **Bornes et non-régression** : Respect des domaines physiques ($LAI \ge 0$, CWSI $\in [0, 1]$, scores $\in [0, 100]$).
 4. **Idempotence & Causalité** : Stabilité temporelle stricte sans fuite de données futures dans les baselines glissantes.
-5. **Cohérence croisée inter-modules** : Détection et blocage de toute contradiction logique (ex: besoin critique d'irrigation avec score santé $\ge 80\%$).
+5. **Cohérence croisée inter-modules** : Détection et blocage de toute contradiction logique (ex: `BESOIN_NON_COMBLE` avec score santé $\ge 80\%$ — filtre corrigé le 20/09/2026).
 
 **Résultat : 43/43 tests validés avec 100% de succès (0 fail, 0 error).**
+
+> **Run de validation du 20 Septembre 2026** : Pipeline Master exécuté en 3.79 min. Stage 6 — 11 parcelles synchronisées, 0 incohérence détectée. Classification "Sol nu" harmonisée dans l'ensemble des sorties CSV.
